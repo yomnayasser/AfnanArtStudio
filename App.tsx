@@ -1,118 +1,166 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+/* eslint-disable react-native/no-inline-styles */
+import React, {useEffect} from 'react';
+import {LogBox, Text, View} from 'react-native';
+import {TouchableOpacity} from '@wrappers/index';
+import themes from '@constants/themes';
 
-import React from 'react';
-import type {PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
+LogBox.ignoreAllLogs(); //
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
-
-function Section({children, title}: SectionProps): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
+const App = () => {
+  const getTheme = async () => {
+    themes.map(theme => {
+      if (theme.name === 'Light') {
+        theme.apply();
+      }
+    });
+  };
+  useEffect(() => {
+    getTheme();
+  }, []);
   return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
+    <View style={{marginTop: 100, flex: 1}}>
+      <Text style={{textAlign: 'center', fontSize: 30}}>Buttons Options</Text>
+      <TouchableOpacity
+        style={{
+          backgroundColor: '#069987',
+          width: 200,
+          borderRadius: 5,
+          alignSelf: 'center',
+          marginVertical: 20,
+        }}>
+        <Text
+          style={{
+            textAlign: 'center',
+            padding: 20,
+            color: 'white',
+            fontSize: 18,
+            fontWeight: 500,
+          }}>
+          Option 1
+        </Text>
+      </TouchableOpacity>
+      {/* <TouchableOpacity
+        style={{
+          backgroundColor: '#0cb2a4',
+          width: 200,
+          borderRadius: 5,
+          alignSelf: 'center',
+          marginVertical: 20,
+        }}>
+        <Text
+          style={{
+            textAlign: 'center',
+            padding: 20,
+            color: 'white',
+            fontSize: 18,
+            fontWeight: 500,
+          }}>
+          Option 2
+        </Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        style={{
+          backgroundColor: '#6cdbd2',
+          width: 200,
+          borderRadius: 5,
+          alignSelf: 'center',
+          marginVertical: 20,
+        }}>
+        <Text
+          style={{
+            textAlign: 'center',
+            padding: 20,
+            color: 'white',
+            fontSize: 18,
+            fontWeight: 500,
+          }}>
+          Option 3
+        </Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        style={{
+          backgroundColor: '#98e5db',
+          width: 200,
+          borderRadius: 5,
+          alignSelf: 'center',
+          marginVertical: 20,
+        }}>
+        <Text
+          style={{
+            textAlign: 'center',
+            padding: 20,
+            color: 'white',
+            fontSize: 18,
+            fontWeight: 500,
+          }}>
+          Option 4
+        </Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        style={{
+          backgroundColor: '#c6ebe3',
+          width: 200,
+          borderRadius: 5,
+          alignSelf: 'center',
+          marginVertical: 20,
+        }}>
+        <Text
+          style={{
+            textAlign: 'center',
+            padding: 20,
+            color: 'white',
+            fontSize: 18,
+            fontWeight: 500,
+          }}>
+          Option 5
+        </Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        style={{
+          backgroundColor: '#c7eeeb',
+          width: 200,
+          borderRadius: 5,
+          alignSelf: 'center',
+          marginVertical: 20,
+        }}>
+        <Text
+          style={{
+            textAlign: 'center',
+            padding: 20,
+            color: 'white',
+            fontSize: 18,
+            fontWeight: 500,
+          }}>
+          Option 6
+        </Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        style={{
+          backgroundColor: '#e6e6e4',
+          width: 200,
+          borderRadius: 5,
+          alignSelf: 'center',
+          marginVertical: 20,
+        }}>
+        <Text
+          style={{
+            textAlign: 'center',
+            padding: 20,
+            color: '#141414',
+            fontSize: 18,
+            fontWeight: 500,
+          }}>
+          Option 7
+        </Text>
+      </TouchableOpacity> */}
     </View>
   );
-}
-
-function App(): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          {/* <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section> */}
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
-}
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
+};
 
 export default App;
