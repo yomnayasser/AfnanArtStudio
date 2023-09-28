@@ -9,10 +9,11 @@
     "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
     "baseUrl": ".",
     "paths": {
+      "@common/*": ["./src/common/*"],
       "@screens/*": ["./src/screens/*"],
       "@wrappers/*": ["./src/wrappers/*"],
       "@constants/*": ["./src/constants/*"],
-      "@common/*": ["./src/common/*"],
+      "@navigation/*": ["./src/navigation/*"],
       "@components/*": ["./src/components/*"],
     }
   }

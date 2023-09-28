@@ -1,9 +1,9 @@
-/* eslint-disable react-native/no-inline-styles */
-import React, {useEffect} from 'react';
 import {LogBox} from 'react-native';
-import {Text, TouchableOpacity, View} from '@wrappers/index';
+import React, {useEffect} from 'react';
+
 import themes from '@constants/themes';
-import layouts from '@constants/styles/layouts';
+import {Navigators} from '@navigation/index';
+import ProvidersWrapper from './ProvidersWrapper';
 
 LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
 LogBox.ignoreAllLogs(); //
@@ -20,8 +20,26 @@ const App = () => {
     getTheme();
   }, []);
   return (
-    <View style={{marginTop: 100, flex: 1}}>
-      {/* <Text center largeSize color={'@darkText'}>
+    <>
+      <Navigators />
+    </>
+  );
+};
+
+const AppWithProvider = () => {
+  return (
+    <ProvidersWrapper>
+      <App />
+    </ProvidersWrapper>
+  );
+};
+
+export default AppWithProvider;
+
+/* eslint-disable react-native/no-inline-styles */
+
+{
+  /* <Text center largeSize color={'@darkText'}>
         Buttons Options
       </Text>
       <TouchableOpacity
@@ -35,8 +53,10 @@ const App = () => {
         <Text center style={{...layouts.my.xl, borderRadius: 5}}>
           Option 1
         </Text>
-      </TouchableOpacity> */}
-      {/* <TouchableOpacity
+      </TouchableOpacity> */
+}
+{
+  /* <TouchableOpacity
         style={{
           backgroundColor: '#0cb2a4',
           width: 200,
@@ -154,9 +174,5 @@ const App = () => {
           }}>
           Option 7
         </Text>
-      </TouchableOpacity> */}
-    </View>
-  );
-};
-
-export default App;
+        </TouchableOpacity> */
+}
