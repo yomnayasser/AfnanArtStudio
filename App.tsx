@@ -1,8 +1,9 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useEffect} from 'react';
-import {LogBox, Text, View} from 'react-native';
-import {TouchableOpacity} from '@wrappers/index';
+import {LogBox} from 'react-native';
+import {Text, TouchableOpacity, View} from '@wrappers/index';
 import themes from '@constants/themes';
+import layouts from '@constants/styles/layouts';
 
 LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
 LogBox.ignoreAllLogs(); //
@@ -20,7 +21,9 @@ const App = () => {
   }, []);
   return (
     <View style={{marginTop: 100, flex: 1}}>
-      <Text style={{textAlign: 'center', fontSize: 30}}>Buttons Options</Text>
+      {/* <Text center largeSize color={'@darkText'}>
+        Buttons Options
+      </Text>
       <TouchableOpacity
         style={{
           backgroundColor: '#069987',
@@ -29,17 +32,10 @@ const App = () => {
           alignSelf: 'center',
           marginVertical: 20,
         }}>
-        <Text
-          style={{
-            textAlign: 'center',
-            padding: 20,
-            color: 'white',
-            fontSize: 18,
-            fontWeight: 500,
-          }}>
+        <Text center style={{...layouts.my.xl, borderRadius: 5}}>
           Option 1
         </Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
       {/* <TouchableOpacity
         style={{
           backgroundColor: '#0cb2a4',

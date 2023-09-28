@@ -12,6 +12,7 @@
       "@screens/*": ["./src/screens/*"],
       "@wrappers/*": ["./src/wrappers/*"],
       "@constants/*": ["./src/constants/*"],
+      "@common/*": ["./src/common/*"],
       "@components/*": ["./src/components/*"],
     }
   }

@@ -6,6 +6,7 @@ module.exports = {
       {
         alias: {
           '@screens': './src/screens',
+          '@common': './src/common',
           '@wrappers': './src/wrappers',
           '@constants': './src/constants',
           '@components': './src/components',

@@ -1,3 +1,5 @@
+// import fontSizes from '@constants/styles/fontSizes';
+import {fontSizes} from '@constants/styles';
 import colors from '../styles/colors';
 
 const primary = {
@@ -19,4 +21,8 @@ const white = {
   dark: colors.white[150], //#e6e6e4
 };
 
-export const light = {};
+export const light = {
+  ...fontSizes,
+  text: white.default,
+  darkText: black.default,
+};
