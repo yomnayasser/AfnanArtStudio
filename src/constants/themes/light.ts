@@ -25,4 +25,7 @@ export const light = {
   ...fontSizes,
   text: white.default,
   darkText: black.default,
+  background: white.dark,
+  primaryButton: primary.dark,
+  primaryButton2: primary.light,
 };

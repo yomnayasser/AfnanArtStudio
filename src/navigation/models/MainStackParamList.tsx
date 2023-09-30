@@ -1,6 +1,6 @@
 type MainStackParamList = {
   LandingPage: undefined;
-  Home: undefined;
+  Login: undefined;
 };
 
 export default MainStackParamList;

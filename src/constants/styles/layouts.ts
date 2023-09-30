@@ -10,7 +10,7 @@ export const spacing = {
   mlg: px(12),
   mmlg: px(14),
   xl: px(16),
-  xxl: px(24),
+  xxl: px(20),
   xxxl: px(32),
   bigxl: px(500),
 };
@@ -176,21 +176,7 @@ const layouts = {
     mmlg: {marginVertical: spacing.mmlg},
     xl: {marginVertical: spacing.xl},
     xxl: {marginVertical: spacing.xxl},
-  },
-
-  // Action sheet spacing
-  actionSheetSpacing: {
-    paddingHorizontal: px(16),
-    paddingTop: px(32),
-    paddingBottom: px(42),
-  },
-  actionSheetContainer: {
-    marginHorizontal: spacing.xl,
-    marginBottom: spacing.xxl,
-  },
-  actionSheetRadius: {
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
+    xxxl: {marginVertical: spacing.xxxl},
   },
 
   // Absolute positioning

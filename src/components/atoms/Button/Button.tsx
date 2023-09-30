@@ -1,10 +1,20 @@
-import {View} from '@wrappers/index';
+import layouts from '@constants/styles/layouts';
+import {Text, TouchableOpacity} from '@wrappers/index';
 import React from 'react';
+import styles from './Button.styles';
 
-type Props = {};
+type Props = {
+  title: string;
+};
 
-const Button = (props: Props) => {
-  return <View>{/* <Text>Button</Text> */}</View>;
+const Button = ({title}: Props) => {
+  return (
+    <TouchableOpacity style={styles.container}>
+      <Text center xxMediumSize style={styles.text}>
+        {title}
+      </Text>
+    </TouchableOpacity>
+  );
 };
 
 export default Button;
