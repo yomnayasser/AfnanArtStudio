@@ -1,27 +1,28 @@
-import {Button} from '@components/atoms';
-import {Text, View} from '@wrappers/index';
-import React from 'react';
-import styles from './Login.styles';
+import {t} from 'i18next';
+import {I18nManager} from 'react-native';
 import LottieView from 'lottie-react-native';
+import React, {useRef, useState} from 'react';
+import BottomSheet from '@gorhom/bottom-sheet';
+
+import styles from './Login.styles';
+import {LoginSheet} from '@sheets/index';
+import {Button} from '@components/index';
+import {Text, View} from '@wrappers/index';
 import {ANIMATION} from '@constants/assets';
 
-type Props = {};
-
-const Login = (props: Props) => {
+const Login = () => {
+  const loginSheetRef = useRef<BottomSheet>(null);
+  const [loginSheetIndex, setLoginSheetIndex] = useState(-1);
+  console.log('I18nManager.isRTLsss', I18nManager.isRTL);
   return (
     <View style={styles.container}>
       <Text center largeSize color={'@darkText'}>
-        Welcome!
-      </Text>
-      <Text center largeSize color={'@darkText'} style={{marginBottom: 10}}>
-        Please select your role
+        {t('welcome')}
       </Text>
       <View style={styles.buttonContainer}>
-        <Button title="Instructor" />
+        <Button title="Login" style={styles.button} onPress={() => {}} />
       </View>
-      <View style={styles.buttonContainer}>
-        <Button title="Student" />
-      </View>
+
       <LottieView
         autoPlay
         loop

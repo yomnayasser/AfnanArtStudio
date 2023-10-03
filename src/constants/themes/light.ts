@@ -8,12 +8,23 @@ const primary = {
   bg2: colors.aqua[50], //#c6ebe3
   light: colors.aqua[80], //#6cdbd2
   light2: colors.aqua[60], //#98e5db
-  default: colors.aqua[100], //#0cb2a4
-  dark: colors.aqua[150], //#069987
+  default: colors.aqua[150], //#069987
+  dark: colors.aqua[100], //#0cb2a4
+};
+const secondary = {
+  default: colors.orange[100], //#FF7260,
+  dark: colors.orange[200], //#FF634D
 };
 
 const black = {
+  light: colors.black[20], //#505050,
   default: colors.black[100], //#141414
+};
+
+const error = {
+  bg: colors.red[25], //#FEEBF0
+  dark: colors.red[100], //#B91231
+  default: colors.red[50], //#D52942
 };
 
 const white = {
@@ -23,9 +34,37 @@ const white = {
 
 export const light = {
   ...fontSizes,
-  text: white.default,
+  primaryButtonText: white.default,
   darkText: black.default,
   background: white.dark,
   primaryButton: primary.dark,
   primaryButton2: primary.light,
+
+  // Primary button
+  primaryButtonBG: primary.default,
+  primaryPressedButtonBG: primary.dark,
+
+  // secondary button
+  secondaryButtonBG: secondary.default,
+  secondaryPressedButtonBG: secondary.dark,
+
+  //  danger button
+  dangerButtonBG: error.default,
+  dangerPressedButtonBG: error.dark,
+
+  //outlined
+  outlinedPrimaryButtonBG: white.default,
+  outlinedPrimaryButtonBorder: primary.default,
+  outlinedPrimaryPressedButtonBorder: primary.default,
+  outlinedPrimaryButtonText: primary.default,
+
+  outlinedSecondaryButtonBG: white.default,
+  outlinedSecondaryButtonBorder: secondary.default,
+  outlinedSecondaryPressedButtonBorder: secondary.default,
+  outlinedSecondaryButtonText: secondary.default,
+
+  outlinedDangerButtonBG: white.default,
+  outlinedDangerPressedButtonBorder: error.default,
+  outlinedDangerButtonBorder: error.default,
+  outlinedDangerButtonText: error.default,
 };

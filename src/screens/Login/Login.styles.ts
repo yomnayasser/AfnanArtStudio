@@ -1,17 +1,18 @@
 import layouts from '@constants/styles/layouts';
-import {Dimensions, Platform, StyleSheet} from 'react-native';
-const WINDOW_WIDTH = Dimensions.get('window').width;
-const WINDOW_HEIGHT = Dimensions.get('window').height;
+import {Platform, StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
   container: {
-    // ...layouts.allCentered,
     ...layouts.flexed,
     backgroundColor: '@background',
     paddingTop: Platform.OS === 'ios' ? '50%' : '20%',
     ...layouts.px.xl,
   },
   buttonContainer: {
+    ...layouts.allCentered,
+    ...layouts.mt.xxl,
+  },
+  button: {
     ...layouts.my.xxxl,
   },
   animation1: {
