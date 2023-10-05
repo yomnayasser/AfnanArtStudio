@@ -5,8 +5,9 @@ module.exports = {
       'module-resolver',
       {
         alias: {
-          '@common': './src/common',
+          '@forms': './src/forms',
           '@sheets': './src/sheets',
+          '@common': './src/common',
           '@screens': './src/screens',
           '@wrappers': './src/wrappers',
           '@constants': './src/constants',

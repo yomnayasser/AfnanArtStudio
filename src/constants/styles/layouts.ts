@@ -193,7 +193,7 @@ const layouts = {
   noBorder: {borderWidth: 0},
   border: {borderWidth: 1},
   grayBorder: {borderColor: '@greyBorder', borderWidth: 1},
-  bordered: {borderColor: '@border', borderWidth: 1},
+  bordered: {borderColor: '@outlinedPrimaryButtonBorder', borderWidth: 1.5},
   // horizontalBorder: {borderBottomWidth: 1, borderBottomColor: '@border'},
   horizontalBorder: {
     borderBottomWidth: 1,

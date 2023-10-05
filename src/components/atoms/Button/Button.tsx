@@ -9,7 +9,7 @@ import {Pressable, Text, View} from '@wrappers/index';
 
 type props = {
   title: string;
-  onPress: (event: GestureResponderEvent) => void | null | undefined;
+  onPress: (event: GestureResponderEvent) => Promise<void> | null | undefined;
   fullWidth?: boolean;
   primary?: boolean;
   secondary?: boolean;

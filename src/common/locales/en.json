@@ -1,5 +1,8 @@
 {
-  "welcome": "Welcome!",
+  "afnan_art_studio": "Afnan Art Studio",
+  "loginForm_validation": "Invalid Username",
+  "required_error": "This Field is Required",
   "select_role": " Please Select Your Role",
-  "please_login": "Please Login"
+  "please_login": "Please Login",
+  "welcome": "Welcome To"
 }

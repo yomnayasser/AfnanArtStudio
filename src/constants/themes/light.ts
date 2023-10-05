@@ -67,4 +67,8 @@ export const light = {
   outlinedDangerPressedButtonBorder: error.default,
   outlinedDangerButtonBorder: error.default,
   outlinedDangerButtonText: error.default,
+
+  //textInput
+  textInputBg: primary.bg,
+  textInputError: error.default,
 };

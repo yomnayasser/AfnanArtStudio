@@ -1,4 +1,11 @@
-import {Animated, StyleProp, TextProps, ViewProps} from 'react-native';
+import {
+  Animated,
+  StyleProp,
+  TextInputAndroidProps,
+  TextInputIOSProps,
+  TextProps,
+  ViewProps,
+} from 'react-native';
 import {ThemedTextStyle, ThemedViewStyle} from './styles';
 
 type MaybeAnimated<T> = T | Animated.Value;
@@ -16,4 +23,45 @@ export type ThemedViewProps = Omit<ViewProps, 'style'> & {
 };
 export type ThemedTextProps = Omit<TextProps, 'style'> & {
   style?: AnimatedStyle<ThemedTextStyle>;
+};
+
+export type TextInputProps = Omit<
+  TextInputAndroidProps | TextInputIOSProps,
+  | 'style'
+  | 'field'
+  | 'form'
+  | 'keyboardType'
+  | 'placeholder'
+  | 'onChangeTxt'
+  | 'currencyInput'
+  | 'multiline'
+  | 'numberOfLines'
+  | 'resetable'
+  | 'isSelect'
+  | 'disabled'
+  | 'hideErrors'
+  | 'onInputPressedIn'
+  | 'fullWidth'
+  | 'borderless'
+  | 'resetHandler'
+  | 'maxLength'
+> & {
+  style?: AnimatedStyle<ThemedViewStyle>;
+  field: any;
+  form: any;
+  keyboardType: string;
+  placeholder: string;
+  onChangeTxt: Function;
+  currencyInput: string;
+  multiline: boolean;
+  numberOfLines: number;
+  resetable: boolean;
+  isSelect: boolean;
+  disabled: boolean;
+  hideErrors: boolean;
+  onInputPressedIn: Function;
+  fullWidth: boolean;
+  borderless: boolean;
+  resetHandler: Function;
+  maxLength: number;
 };

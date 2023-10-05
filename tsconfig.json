@@ -9,6 +9,7 @@
     "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
     "baseUrl": ".",
     "paths": {
+      "@forms/*": ["./src/forms/*"],
       "@common/*": ["./src/common/*"],
       "@sheets/*": ["./src/sheets/*"],
       "@screens/*": ["./src/screens/*"],

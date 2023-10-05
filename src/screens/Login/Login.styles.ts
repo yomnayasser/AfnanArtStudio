@@ -5,7 +5,7 @@ export default StyleSheet.create({
   container: {
     ...layouts.flexed,
     backgroundColor: '@background',
-    paddingTop: Platform.OS === 'ios' ? '50%' : '20%',
+    paddingTop: Platform.OS === 'ios' ? '35%' : '20%',
     ...layouts.px.xl,
   },
   buttonContainer: {

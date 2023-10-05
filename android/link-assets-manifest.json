@@ -20,6 +20,10 @@
     {
       "path": "assets/fonts/Poppins-SemiBold.ttf",
       "sha1": "8a4ace9392d06bcb7f8ea2f5169b07e4c383a90d"
+    },
+    {
+      "path": "assets/fonts/afnan-icons-v01.ttf",
+      "sha1": "90754fcb78fe54e2c6fafe84931bde9cf34a075f"
     }
   ]
 }
