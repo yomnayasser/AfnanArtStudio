@@ -1,17 +1,19 @@
 import React, {useState} from 'react';
-import {Control, Controller, FieldValues} from 'react-hook-form';
+import {Control, Controller} from 'react-hook-form';
 import {getCurrentTheme} from 'react-native-theming';
 
 import styles from './Input.styles';
 import {Text, TextInput, TouchableOpacity, View} from '@wrappers/index';
 import {Icon} from '@components/atoms';
+import {LoginFormValues} from '@common/types';
 
 type Props = {
-  control: Control<FieldValues, any> | undefined;
+  control: Control<LoginFormValues, any> | undefined;
   placeholder: string;
-  onChange: Function;
-  name: string;
+  onChange?: Function;
+  name: 'password' | 'userName';
   type?: string;
+  isSubmitted?: boolean;
 };
 
 const Input = ({control, placeholder, name, type}: Props) => {

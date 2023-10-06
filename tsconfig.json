@@ -11,6 +11,7 @@
     "paths": {
       "@forms/*": ["./src/forms/*"],
       "@common/*": ["./src/common/*"],
+      "@fakers/*": ["./src/fakers/*"],
       "@sheets/*": ["./src/sheets/*"],
       "@screens/*": ["./src/screens/*"],
       "@wrappers/*": ["./src/wrappers/*"],

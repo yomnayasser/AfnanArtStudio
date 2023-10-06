@@ -1,3 +1,4 @@
+import {UserFaker} from '../../fakers/index';
 import {t} from 'i18next';
 import * as yup from 'yup';
 
@@ -6,7 +7,26 @@ const LoginFormSchema = yup.object().shape({
     .string()
     .required(`${t('required_error')}`)
     .typeError('')
-    .matches(/^\S*$/, 'No whitespace allowed'),
+    .matches(/^\S*$/, 'No whitespace allowed')
+    .test({
+      name: 'equality',
+      test: function (value, ctx) {
+        let found = false;
+        UserFaker.map(user => {
+          if (user.username === value) {
+            found = true;
+          }
+        });
+        if (!found)
+          return ctx.createError({
+            message: () => {
+              return `${t('user_not_found')}`;
+            },
+          });
+
+        return true;
+      },
+    }),
   password: yup.string().required(`${t('required_error')}`),
   // .matches(/^(?=.*[a-z])/, 'Password Must Contain One Lowercase Character')
   // .matches(/^(?=.*[A-Z])/, 'Password Must Contain One Uppercase Character')

@@ -6,8 +6,9 @@ module.exports = {
       {
         alias: {
           '@forms': './src/forms',
-          '@sheets': './src/sheets',
+          '@fakers': './src/fakers',
           '@common': './src/common',
+          '@sheets': './src/sheets',
           '@screens': './src/screens',
           '@wrappers': './src/wrappers',
           '@constants': './src/constants',

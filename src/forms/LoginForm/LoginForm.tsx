@@ -1,28 +1,47 @@
 import React from 'react';
-import {yupResolver} from '@hookform/resolvers/yup';
 import {useForm} from 'react-hook-form';
+import {yupResolver} from '@hookform/resolvers/yup';
+import {useNavigation} from '@react-navigation/native';
 
-import styles from './LoginForm.styles';
 import {View} from '@wrappers/index';
+import styles from './LoginForm.styles';
 import {Button, Input} from '@components/index';
 import {LoginFormSchema} from '@common/validations';
-import {layouts} from '@constants/styles';
+import {LoginScreenNavigationProp} from '@navigation/navigationTypes';
+import {LoginFormValues} from '@common/types';
+import {UserFaker} from '../../fakers/index';
 
 const LoginForm = () => {
-  const {control, handleSubmit} = useForm({
+  const navigation = useNavigation<LoginScreenNavigationProp>();
+  const {
+    control,
+    handleSubmit,
+    formState: {isSubmitted},
+  } = useForm<LoginFormValues>({
     defaultValues: {
       userName: '',
       password: '',
     },
     resolver: yupResolver(LoginFormSchema),
-    mode: 'all',
+    mode: 'onSubmit',
   });
-  const onSubmit = handleSubmit(data => console.log(data));
+  const onSubmit = handleSubmit(data =>
+    UserFaker.map(user => {
+      if (user.username === data.userName) {
+        navigation.navigate('StudentsDashboard', {user: user});
+      }
+    }),
+  );
 
   return (
-    <View style={{...layouts.allCentered, ...layouts.my.xxxl}}>
+    <View style={styles.container}>
       <View style={styles.inputContainer}>
-        <Input control={control} placeholder="Username" name="userName" />
+        <Input
+          control={control}
+          placeholder="Username"
+          name="userName"
+          isSubmitted={isSubmitted}
+        />
       </View>
       <View style={styles.inputContainer}>
         <Input
@@ -30,6 +49,7 @@ const LoginForm = () => {
           placeholder="Password"
           name="password"
           type="password"
+          isSubmitted={isSubmitted}
         />
       </View>
       <Button title="Login" style={styles.button} onPress={onSubmit} />

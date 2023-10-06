@@ -65,3 +65,8 @@ export type TextInputProps = Omit<
   resetHandler: Function;
   maxLength: number;
 };
+
+export type LoginFormValues = {
+  userName: string;
+  password: string;
+};
