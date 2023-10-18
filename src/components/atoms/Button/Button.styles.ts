@@ -8,7 +8,6 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     height: px(55),
-    width: px(270),
     backgroundColor: '@primaryButtonBG',
   },
   buttonOutlined: {

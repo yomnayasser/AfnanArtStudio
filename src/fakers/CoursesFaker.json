@@ -1,0 +1,85 @@
+[
+  {
+    "name": "Acrylic",
+    "image": "Acrylic",
+    "experience": "No Experience Needed",
+    "outcomes": [
+      "You will learn color theory and color mixing",
+      "You will learn how to start the painting and put the final touches with different techniques."
+    ],
+    "packagesName": ["4 Sessions", "8 Sessions", "14 Sessions"],
+    "packagesPrices": [["950", "1450", "2000"]],
+    "notes": ["No Materials included", "No Experience Needed"],
+    "sessionDuration": 3
+  },
+  {
+    "name": "Oil",
+    "image": "Oil",
+    "experience": "No Experience Needed",
+    "outcomes": [
+      "You will learn color theory and color mixing",
+      "You will learn how to start the painting and put the final touches with different techniques."
+    ],
+    "packagesName": ["4 Sessions", "8 Sessions", "14 Sessions"],
+    "packagesPrices": [["950", "1450", "2000"]],
+    "notes": ["No Materials included"],
+    "sessionDuration": 3
+  },
+  {
+    "name": "Sketching",
+    "image": "Sketching",
+    "experience": "No Experience Needed",
+    "outcomes": [
+      "You will learn basic of geometric shapes",
+      "You will learn how to do shades and ratio rules",
+      "You will learn how to still-life positions",
+      "You will practice on live drawing"
+    ],
+    "packagesName": ["5 Sessions"],
+    "packagesPrices": [["1000"]],
+    "notes": [],
+    "sessionDuration": 3
+  },
+  {
+    "name": "Kids",
+    "image": "KidsArt",
+    "experience": "No Experience Needed",
+    "outcomes": [
+      "Your kid will learn how to draw a geometric shapes and how to shade them",
+      "Your kid will learn about color wheel and color mixing with practice.",
+      "Your kid will learn how to paint different artworks with different techniques on canvas.",
+      "Your kid will learn how to learn different types of art like painting-acrylic, pouring, clay-tie-dye and more."
+    ],
+    "packagesName": ["10 Sessions"],
+    "packagesPrices": [["1500"]],
+    "notes": ["Materials are included"],
+    "sessionDuration": 2
+  },
+  {
+    "name": "Resin",
+    "image": "Resin",
+    "experience": "No Experience Needed",
+    "outcomes": [
+      "You will learn what material you will need and how to get them",
+      "You will learn about different materials and mixing colors",
+      "The expected results are wall-clock, tray, key chain, .."
+    ],
+    "packagesName": ["2 Sessions"],
+    "packagesPrices": [["2000"]],
+    "notes": ["Materials are included"],
+    "sessionDuration": 3
+  },
+  {
+    "name": "Macrame",
+    "image": "Macrame",
+    "experience": "No Experience Needed",
+    "outcomes": [
+      "You will learn color theory and color mixing",
+      "You will learn how to start the painting and put the final touches with different techniques."
+    ],
+    "packagesName": ["4 Sessions", "8 Sessions", "14 Sessions"],
+    "packagesPrices": [["950", "1450", "2000"]],
+    "notes": ["No Materials included", "No Experience Needed"],
+    "sessionDuration": 3
+  }
+]

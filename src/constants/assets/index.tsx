@@ -3,7 +3,13 @@ type images = {
 };
 
 export const IMAGES: images = {
+  Oil: require('./Images/oil.jpeg'),
+  Resin: require('./Images/resin.jpeg'),
+  KidsArt: require('./Images/kids.jpeg'),
   Logo: require('./Images/AfnanLogo.jpg'),
+  Acrylic: require('./Images/acrylic.jpg'),
+  Macrame: require('./Images/macrame.jpeg'),
+  Sketching: require('./Images/sketching.jpeg'),
 };
 
 export const ANIMATION = {

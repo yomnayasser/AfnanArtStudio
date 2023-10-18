@@ -31,6 +31,17 @@ const white = {
   default: colors.white[100], //#fff
   dark: colors.white[150], //#e6e6e4
 };
+const gray = {
+  bg: colors.gray[60], //'#97A8BB'
+  bg1: colors.gray[70], //#7C96B0
+
+  light: colors.gray[40], //'#B6C7DA'
+  light1: colors.gray[50], //#95AAC2
+
+  dark: colors.gray[200], //#415261
+
+  default: colors.gray[100], //#435363
+};
 
 export const light = {
   ...fontSizes,
@@ -39,6 +50,7 @@ export const light = {
   background: white.dark,
   primaryButton: primary.dark,
   primaryButton2: primary.light,
+  primaryText: primary.default,
 
   // Primary button
   primaryButtonBG: primary.default,
@@ -71,4 +83,11 @@ export const light = {
   //textInput
   textInputBg: primary.bg,
   textInputError: error.default,
+
+  //icons
+  backIcon: gray.light1,
+
+  //table
+  tableBorderColor: primary.default,
+  tableBG: primary.bg,
 };

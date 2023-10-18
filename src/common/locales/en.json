@@ -1,9 +1,15 @@
 {
   "afnan_art_studio": "Afnan Art Studio",
+  "all_available_courses": "All Available Courses",
+  "course": "Course",
   "loginForm_validation": "Invalid Username",
   "required_error": "This Field is Required",
   "select_role": " Please Select Your Role",
   "please_login": "Please Login",
   "welcome": "Welcome To",
-  "user_not_found": "User Not Found"
+  "what_to_expect": "What To Expect From The Course:",
+  "hours_per_session": "hours per session",
+  "user_not_found": "User Not Found",
+  "notes": "Notes:",
+  "hello": "Hello"
 }

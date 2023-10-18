@@ -33,6 +33,7 @@ const layouts = {
   selfStart: {alignSelf: 'flex-start'} as ViewStyle,
   selfCenter: {alignSelf: 'center'} as ViewStyle,
   contentStart: {alignContent: 'flex-start'} as ViewStyle,
+  wrapped: {flexWrap: 'wrap'} as ViewStyle,
 
   // Padding
   ps: {

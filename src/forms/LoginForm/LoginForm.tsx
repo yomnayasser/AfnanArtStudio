@@ -9,7 +9,7 @@ import {Button, Input} from '@components/index';
 import {LoginFormSchema} from '@common/validations';
 import {LoginScreenNavigationProp} from '@navigation/navigationTypes';
 import {LoginFormValues} from '@common/types';
-import {UserFaker} from '../../fakers/index';
+import {UserFaker} from '@fakers/index';
 
 const LoginForm = () => {
   const navigation = useNavigation<LoginScreenNavigationProp>();
@@ -28,7 +28,12 @@ const LoginForm = () => {
   const onSubmit = handleSubmit(data =>
     UserFaker.map(user => {
       if (user.username === data.userName) {
-        navigation.navigate('StudentsDashboard', {user: user});
+        navigation.navigate('StudentNavigator', {
+          screen: 'StudentsDashboard',
+          params: {
+            user: user,
+          },
+        });
       }
     }),
   );

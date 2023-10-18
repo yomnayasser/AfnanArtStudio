@@ -70,3 +70,14 @@ export type LoginFormValues = {
   userName: string;
   password: string;
 };
+
+export type courseDetailsTypes = {
+  name: string;
+  image: string;
+  experience: string;
+  outcomes: string[];
+  packagesName: string[];
+  packagesPrices: string[][];
+  notes: string[];
+  sessionDuration: number;
+};

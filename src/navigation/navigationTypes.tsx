@@ -1,5 +1,5 @@
 import {StackNavigationProp} from '@react-navigation/stack';
-import {MainStackParamList} from './models';
+import {MainStackParamList, StudentStackParamList} from './models';
 import {RouteProp} from '@react-navigation/native';
 
 //MainNavigator
@@ -8,8 +8,21 @@ export type LoginScreenNavigationProp = StackNavigationProp<
   MainStackParamList,
   'Login'
 >;
+
+//StudentStackParamList
+//stack
+export type StudentsDashboardScreen = StackNavigationProp<
+  StudentStackParamList,
+  'StudentsDashboard'
+>;
+
 //route
 export type StudentsDashboardScreenRouteProp = RouteProp<
-  MainStackParamList,
+  StudentStackParamList,
   'StudentsDashboard'
+>;
+
+export type CourseDetailsScreenRouteProp = RouteProp<
+  StudentStackParamList,
+  'CourseDetails'
 >;
