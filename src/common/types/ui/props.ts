@@ -80,4 +80,5 @@ export type courseDetailsTypes = {
   packagesPrices: string[][];
   notes: string[];
   sessionDuration: number;
+  disabled: boolean;
 };

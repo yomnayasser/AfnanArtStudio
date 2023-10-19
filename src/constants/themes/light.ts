@@ -51,6 +51,7 @@ export const light = {
   primaryButton: primary.dark,
   primaryButton2: primary.light,
   primaryText: primary.default,
+  disabledText: gray.light,
 
   // Primary button
   primaryButtonBG: primary.default,

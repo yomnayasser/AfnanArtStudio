@@ -57,7 +57,7 @@ const LoginForm = () => {
           isSubmitted={isSubmitted}
         />
       </View>
-      <Button title="Login" style={styles.button} onPress={onSubmit} />
+      <Button  title="Login" style={styles.button} onPress={onSubmit} />
     </View>
   );
 };

@@ -8,8 +8,7 @@ import {
 } from '@navigation/navigationTypes';
 import {Text, View} from '@wrappers/index';
 import styles from './StudentsDashboard.styles';
-import {CoursesList, Header} from '@components/index';
-import {layouts} from '@constants/styles';
+import {HorizontalCoursesList, Header} from '@components/index';
 
 type Props = {
   route: StudentsDashboardScreenRouteProp;
@@ -30,7 +29,7 @@ const StudentsDashboard = ({route}: Props) => {
         }}
         style={styles.header}
       />
-      <CoursesList />
+      <HorizontalCoursesList />
     </View>
   );
 };

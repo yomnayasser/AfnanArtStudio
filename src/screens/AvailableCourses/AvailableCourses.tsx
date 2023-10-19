@@ -1,22 +1,27 @@
-import {View, Text} from 'react-native';
+import {ScrollView, View} from 'react-native';
 import React from 'react';
-import {Button} from '@components/atoms';
 import {useNavigation} from '@react-navigation/native';
+import {VerticalCoursesList, ScreenHeader} from '@components/index';
+import styles from './AvailableCourses.styles';
+import {CoursesFaker} from '@fakers/index';
 
 type Props = {};
 
 const AvailableCourses = (props: Props) => {
   const navigation = useNavigation();
   return (
-    <View>
-      <Text>AvailableCourses</Text>
-      <Button
-        title="back"
+    <ScrollView>
+      <ScreenHeader
         onPress={() => {
           navigation.goBack();
         }}
       />
-    </View>
+      <View style={styles.container}>
+        {CoursesFaker.map(course => {
+          return <VerticalCoursesList course={course} />;
+        })}
+      </View>
+    </ScrollView>
   );
 };
 

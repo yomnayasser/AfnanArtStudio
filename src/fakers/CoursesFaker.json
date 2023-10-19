@@ -10,7 +10,9 @@
     "packagesName": ["4 Sessions", "8 Sessions", "14 Sessions"],
     "packagesPrices": [["950", "1450", "2000"]],
     "notes": ["No Materials included", "No Experience Needed"],
-    "sessionDuration": 3
+    "sessionDuration": 3,
+    "disabled":false
+
   },
   {
     "name": "Oil",
@@ -23,7 +25,9 @@
     "packagesName": ["4 Sessions", "8 Sessions", "14 Sessions"],
     "packagesPrices": [["950", "1450", "2000"]],
     "notes": ["No Materials included"],
-    "sessionDuration": 3
+    "sessionDuration": 3,
+    "disabled":false
+
   },
   {
     "name": "Sketching",
@@ -38,7 +42,9 @@
     "packagesName": ["5 Sessions"],
     "packagesPrices": [["1000"]],
     "notes": [],
-    "sessionDuration": 3
+    "sessionDuration": 3,
+    "disabled":false
+
   },
   {
     "name": "Kids",
@@ -53,7 +59,8 @@
     "packagesName": ["10 Sessions"],
     "packagesPrices": [["1500"]],
     "notes": ["Materials are included"],
-    "sessionDuration": 2
+    "sessionDuration": 2,
+    "disabled":false
   },
   {
     "name": "Resin",
@@ -67,7 +74,8 @@
     "packagesName": ["2 Sessions"],
     "packagesPrices": [["2000"]],
     "notes": ["Materials are included"],
-    "sessionDuration": 3
+    "sessionDuration": 3,
+    "disabled":true
   },
   {
     "name": "Macrame",
@@ -80,6 +88,8 @@
     "packagesName": ["4 Sessions", "8 Sessions", "14 Sessions"],
     "packagesPrices": [["950", "1450", "2000"]],
     "notes": ["No Materials included", "No Experience Needed"],
-    "sessionDuration": 3
+    "sessionDuration": 3,
+    "disabled":true
+
   }
 ]

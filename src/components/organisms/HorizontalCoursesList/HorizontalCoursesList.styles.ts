@@ -18,6 +18,14 @@ export default StyleSheet.create({
     borderColor: '@textInputBg',
     ...layouts.mx.md,
   },
-  image: {width: 80, height: 80},
-  text: {...layouts.mt.md},
+  image: {
+    width: 80,
+    height: 80,
+  },
+  text: {
+    ...layouts.mt.md,
+  },
+  imageDisabled: {
+    opacity: 0.3,
+  },
 });

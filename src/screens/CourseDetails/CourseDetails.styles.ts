@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 
-import layouts, {spacing} from '@constants/styles/layouts';
 import {px} from '@common/utils';
+import {spacing,layouts} from '@constants/styles';
 
 export default StyleSheet.create({
   container: {
@@ -14,9 +14,11 @@ export default StyleSheet.create({
 
   note: {...layouts.my.sm},
   buttonContainer: {
-    justifyContent: 'space-around',
     ...layouts.row,
     ...layouts.my.xxl,
   },
-  button: {width: px(150)},
+  button: {
+    width: px(150),
+    ...layouts.mx.mlg
+  },
 });
