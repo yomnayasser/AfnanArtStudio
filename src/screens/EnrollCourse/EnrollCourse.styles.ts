@@ -1,11 +1,13 @@
 import {StyleSheet} from 'react-native';
 
-import {spacing, layouts} from '@constants/styles';
+import layouts, {spacing} from '@constants/styles/layouts';
 
 export default StyleSheet.create({
   container: {
-    marginTop: spacing.xl + 50,
     ...layouts.mx.xl,
+  },
+  radioButton: {
+    marginLeft: -170,
   },
   header: {
     ...layouts.my.xl,

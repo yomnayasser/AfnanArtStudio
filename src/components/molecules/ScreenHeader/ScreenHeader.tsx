@@ -11,10 +11,7 @@ type Props = {
 const ScreenHeader = ({onPress}: Props) => {
   return (
     <Pressable style={styles.container} onPress={onPress}>
-      <Icon name="arrow-left" style={styles.icon} color="@backIcon" size={30} />
-      {/* <Text medium largeSize>
-        {header + ':'}
-      </Text> */}
+      <Icon name="arrow-left" style={styles.icon} size={30} />
     </Pressable>
   );
 };

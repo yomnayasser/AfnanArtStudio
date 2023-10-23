@@ -4,6 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {
   AvailableCourses,
   CourseDetails,
+  EnrollCourse,
   StudentProfile,
   StudentsDashboard,
 } from '@screens/index';
@@ -26,6 +27,7 @@ const StudentNavigator = () => {
         component={AvailableCourses}
       />
       <StudentStack.Screen name="CourseDetails" component={CourseDetails} />
+      <StudentStack.Screen name="EnrollCourse" component={EnrollCourse} />
     </StudentStack.Navigator>
   );
 };

@@ -15,7 +15,10 @@ export type StudentsDashboardScreen = StackNavigationProp<
   StudentStackParamList,
   'StudentsDashboard'
 >;
-
+export type EnrollCourseScreen = StackNavigationProp<
+  StudentStackParamList,
+  'EnrollCourse'
+>;
 //route
 export type StudentsDashboardScreenRouteProp = RouteProp<
   StudentStackParamList,

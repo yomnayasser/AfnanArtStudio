@@ -15,6 +15,9 @@ type StudentStackParamList = {
   CourseDetails: {
     course: courseDetailsTypes;
   };
+  EnrollCourse: {
+    course: courseDetailsTypes;
+  };
 };
 
 export default StudentStackParamList;

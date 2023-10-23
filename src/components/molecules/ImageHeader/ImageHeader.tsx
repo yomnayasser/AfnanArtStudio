@@ -1,24 +1,34 @@
-import {Image, Text, View} from '@wrappers/index';
+import {Text, View} from '@wrappers/index';
 import React from 'react';
 import styles from './ImageHeader.styles';
-import {layouts} from '@constants/styles';
+import {ImageSlider} from '@components/atoms';
+import {getCurrentTheme} from 'react-native-theming';
 
 type Props = {
   title: string;
   subTitle: string;
-  image: string;
+  images: string[];
 };
 
-const ImageHeader = ({title, subTitle, image}: Props) => {
+const ImageHeader = ({title, subTitle, images}: Props) => {
+  const theme = getCurrentTheme().def;
+  const {activeDot, inactiveDot} = theme;
+
   return (
     <View style={styles.header}>
-      <Image source={image} style={styles.image} />
+      <ImageSlider
+        images={images}
+        dotColor={activeDot}
+        inactiveDotColor={inactiveDot}
+        height={200}
+      />
       <View style={styles.titleContainer}>
-        <Text largeSize style={styles.title}>
+        <Text xLargeSize medium style={styles.title}>
           {title}
         </Text>
         <Text
           smallSize
+          medium
           style={styles.subTitle}
           color={'@secondaryPressedButtonBG'}>
           {subTitle}

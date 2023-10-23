@@ -81,4 +81,5 @@ export type courseDetailsTypes = {
   notes: string[];
   sessionDuration: number;
   disabled: boolean;
+  sliderImages: string[];
 };

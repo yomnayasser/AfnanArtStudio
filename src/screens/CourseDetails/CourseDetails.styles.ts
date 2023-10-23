@@ -1,12 +1,13 @@
 import {StyleSheet} from 'react-native';
 
 import {px} from '@common/utils';
-import {spacing,layouts} from '@constants/styles';
+import {spacing, layouts} from '@constants/styles';
 
 export default StyleSheet.create({
   container: {
-    marginTop: spacing.xl + 50,
-    ...layouts.mx.xl,
+    // marginTop: spacing.xl + 50,
+    // ...layouts.mx.xxl,
+    ...layouts.flexed,
   },
 
   title: {...layouts.mt.xxxl},
@@ -19,6 +20,7 @@ export default StyleSheet.create({
   },
   button: {
     width: px(150),
-    ...layouts.mx.mlg
+    ...layouts.mx.md,
+    ...layouts.mb.xl,
   },
 });

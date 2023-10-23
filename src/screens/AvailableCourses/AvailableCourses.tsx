@@ -1,13 +1,12 @@
-import {ScrollView, View} from 'react-native';
 import React from 'react';
+import {ScrollView, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
-import {VerticalCoursesList, ScreenHeader} from '@components/index';
-import styles from './AvailableCourses.styles';
+
 import {CoursesFaker} from '@fakers/index';
+import styles from './AvailableCourses.styles';
+import {VerticalCoursesList, ScreenHeader} from '@components/index';
 
-type Props = {};
-
-const AvailableCourses = (props: Props) => {
+const AvailableCourses = () => {
   const navigation = useNavigation();
   return (
     <ScrollView>

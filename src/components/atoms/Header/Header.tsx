@@ -23,7 +23,7 @@ const Header = ({headerText, iconName, onPressHeader, style}: Props) => {
             {iconName && (
               <Icon
                 name={iconName}
-                color="@backIcon"
+                color="@primaryButtonBG"
                 size={19}
                 style={styles.icon}
               />

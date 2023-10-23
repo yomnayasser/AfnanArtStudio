@@ -91,4 +91,8 @@ export const light = {
   //table
   tableBorderColor: primary.default,
   tableBG: primary.bg,
+
+  //slider
+  activeDot: primary.light,
+  inactiveDot: primary.default,
 };

@@ -10,6 +10,11 @@ export const IMAGES: images = {
   Acrylic: require('./Images/acrylic.jpg'),
   Macrame: require('./Images/macrame.jpeg'),
   Sketching: require('./Images/sketching.jpeg'),
+  Kid1: require('./Images/kids1.jpeg'),
+  Kid2: require('./Images/kid2.jpg'),
+  Kid3: require('./Images/kid3.jpg'),
+  Kid4: require('./Images/kid4.jpg'),
+  Kid5: require('./Images/kid5.jpg'),
 };
 
 export const ANIMATION = {

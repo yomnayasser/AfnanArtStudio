@@ -1,7 +1,9 @@
 {
   "afnan_art_studio": "Afnan Art Studio",
   "all_available_courses": "All Available Courses",
+  "back": "Back",
   "course": "Course",
+  "enroll": "Enroll",
   "loginForm_validation": "Invalid Username",
   "required_error": "This Field is Required",
   "select_role": " Please Select Your Role",
