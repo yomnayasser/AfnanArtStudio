@@ -11,7 +11,8 @@
     "packagesPrices": [["950", "1450", "2000"]],
     "notes": ["No Materials included", "No Experience Needed"],
     "sessionDuration": 3,
-    "disabled": false
+    "disabled": false,
+    "sliderImages": ["acrylic1", "acrylic2", "acrylic3"]
   },
   {
     "name": "Oil",
@@ -25,7 +26,8 @@
     "packagesPrices": [["950", "1450", "2000"]],
     "notes": ["No Materials included"],
     "sessionDuration": 3,
-    "disabled": false
+    "disabled": false,
+    "sliderImages": ["oil1", "oil2", "oil3", "oil4"]
   },
   {
     "name": "Sketching",
@@ -41,7 +43,8 @@
     "packagesPrices": [["1000"]],
     "notes": [],
     "sessionDuration": 3,
-    "disabled": false
+    "disabled": false,
+    "sliderImages": ["sketching1", "sketching2", "sketching3", "sketching4"]
   },
   {
     "name": "Kids",
@@ -73,20 +76,24 @@
     "packagesPrices": [["2000"]],
     "notes": ["Materials are included"],
     "sessionDuration": 3,
-    "disabled": true
+    "disabled": false,
+    "sliderImages": ["resin1", "resin2", "resin3", "resin4"]
   },
   {
-    "name": "Macrame",
-    "image": "Macrame",
+    "name": "Mosaic",
+    "image": "Mosaic",
     "experience": "No Experience Needed",
     "outcomes": [
-      "You will learn color theory and color mixing",
-      "You will learn how to start the painting and put the final touches with different techniques."
+      "You will learn intro about mosaic history and the different materials (glass-stones-etc)",
+      "You will learn information about the materials and where you can get them.",
+      "You will learn how to turn any design to mosaic or mural material.",
+      "You will learn some tips to avoid any mistakes and make it professional piece."
     ],
-    "packagesName": ["4 Sessions", "8 Sessions", "14 Sessions"],
-    "packagesPrices": [["950", "1450", "2000"]],
-    "notes": ["No Materials included", "No Experience Needed"],
+    "packagesName": ["8 Sessions"],
+    "packagesPrices": [["1500"]],
+    "notes": ["Materials included", "No Experience Needed"],
     "sessionDuration": 3,
-    "disabled": true
+    "disabled": false,
+    "sliderImages": ["mosaic1", "mosaic2", "mosaic3"]
   }
 ]

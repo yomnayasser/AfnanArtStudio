@@ -28,8 +28,8 @@ const LoginForm = () => {
   const onSubmit = handleSubmit(data =>
     UserFaker.map(user => {
       if (user.username === data.userName) {
-        navigation.navigate('StudentNavigator', {
-          screen: 'StudentsDashboard',
+        navigation.navigate('BottomTabNavigator', {
+          screen: 'StudentNavigator',
           params: {
             user: user,
           },
@@ -57,7 +57,7 @@ const LoginForm = () => {
           isSubmitted={isSubmitted}
         />
       </View>
-      <Button  title="Login" style={styles.button} onPress={onSubmit} />
+      <Button title="Login" style={styles.button} onPress={onSubmit} />
     </View>
   );
 };

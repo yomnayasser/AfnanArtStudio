@@ -14,27 +14,33 @@ const HorizontalCoursesList = () => {
   };
   return (
     <View style={styles.container}>
-      {CoursesFaker.map(course => {
+      {CoursesFaker.map((course, index) => {
         const imagePath = course.image;
         return (
-          <TouchableOpacity
-            style={styles.innerContainer}
-            onPress={() => {
-              navigation.navigate('CourseDetails', {course: course});
-            }}>
-            <View style={styles.imageContainer}>
-              <Image
-                source={IMAGES[imagePath]}
-                style={[styles.image, checkDisabled(course.disabled)]}
-              />
-            </View>
-            <Text
-              center
-              style={styles.text}
-              color={course?.disabled ? '@disabledText' : '@darkText'}>
-              {course.name}
-            </Text>
-          </TouchableOpacity>
+          <>
+            {index < 6 && (
+              <TouchableOpacity
+                style={styles.innerContainer}
+                onPress={() => {
+                  navigation.navigate('StudentsCourse', {
+                    course: course,
+                  });
+                }}>
+                <View style={styles.imageContainer}>
+                  <Image
+                    source={IMAGES[imagePath]}
+                    style={[styles.image, checkDisabled(course.disabled)]}
+                  />
+                </View>
+                <Text
+                  center
+                  style={styles.text}
+                  color={course?.disabled ? '@disabledText' : '@darkText'}>
+                  {course.name}
+                </Text>
+              </TouchableOpacity>
+            )}
+          </>
         );
       })}
     </View>

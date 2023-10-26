@@ -5,9 +5,10 @@ module.exports = {
       'module-resolver',
       {
         alias: {
+          '@store': './src/store',
           '@forms': './src/forms',
-          '@fakers': './src/fakers',
           '@common': './src/common',
+          '@fakers': './src/fakers',
           '@sheets': './src/sheets',
           '@screens': './src/screens',
           '@wrappers': './src/wrappers',

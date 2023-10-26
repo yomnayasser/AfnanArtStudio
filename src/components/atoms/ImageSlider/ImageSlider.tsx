@@ -24,7 +24,7 @@ const ImageSlider = ({
   return (
     <SliderBox
       images={images}
-      sliderBoxHeight={height}
+      sliderBoxHeight={height ? height : 200}
       dotColor={dotColor}
       inactiveDotColor={inactiveDotColor}
       dotStyle={dotStyle}

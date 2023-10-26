@@ -95,4 +95,11 @@ export const light = {
   //slider
   activeDot: primary.light,
   inactiveDot: primary.default,
+
+  //tabView
+  tabViewBg: primary.bg,
+  tabViewActiveColor: primary.dark,
+
+  //loader
+  loaderColor: primary.default,
 };

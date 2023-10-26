@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 
-import {layouts} from '@constants/styles';
+import {fonts, layouts} from '@constants/styles';
 import {getCurrentTheme} from 'react-native-theming';
 
 export default StyleSheet.create({
@@ -18,5 +18,5 @@ export default StyleSheet.create({
     ...layouts.row,
   },
   row: {height: 50},
-  text: {textAlign: 'center'},
+  text: {textAlign: 'center', fontFamily: fonts.poppinsMedium},
 });

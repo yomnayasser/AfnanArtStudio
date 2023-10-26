@@ -10,6 +10,7 @@
     "baseUrl": ".",
     "paths": {
       "@forms/*": ["./src/forms/*"],
+      "@store/*": ["./src/store/*"],
       "@common/*": ["./src/common/*"],
       "@fakers/*": ["./src/fakers/*"],
       "@sheets/*": ["./src/sheets/*"],
