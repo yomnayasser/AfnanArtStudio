@@ -9,7 +9,6 @@ import {
   StudentsCourse,
 } from '@screens/index';
 import BottomTabNavigator from './BottomTabNavigator';
-import StudentCourseNavigator from './StudentCourseNavigator';
 
 const MainStack = createNativeStackNavigator<MainStackParamList>();
 

@@ -11,6 +11,7 @@ const AvailableCourses = () => {
   return (
     <ScrollView>
       <ScreenHeader
+        header={'Available Courses'}
         onPress={() => {
           navigation.goBack();
         }}

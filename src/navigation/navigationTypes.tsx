@@ -1,6 +1,7 @@
-import {StackNavigationProp} from '@react-navigation/stack';
-import {MainStackParamList, StudentStackParamList} from './models';
 import {RouteProp} from '@react-navigation/native';
+import {StackNavigationProp} from '@react-navigation/stack';
+
+import {MainStackParamList} from './models';
 
 //MainNavigator
 //stack
@@ -8,24 +9,13 @@ export type LoginScreenNavigationProp = StackNavigationProp<
   MainStackParamList,
   'Login'
 >;
+export type AvailableCoursesScreen = StackNavigationProp<
+  MainStackParamList,
+  'AvailableCourses'
+>;
 
-//StudentStackParamList
-//stack
-export type StudentsDashboardScreen = StackNavigationProp<
-  StudentStackParamList,
-  'StudentsDashboard'
->;
-export type EnrollCourseScreen = StackNavigationProp<
-  StudentStackParamList,
-  'EnrollCourse'
->;
 //route
-export type StudentsDashboardScreenRouteProp = RouteProp<
-  StudentStackParamList,
-  'StudentsDashboard'
->;
-
-export type CourseDetailsScreenRouteProp = RouteProp<
-  StudentStackParamList,
-  'CourseDetails'
+export type StudentsCourseScreenRouteProp = RouteProp<
+  MainStackParamList,
+  'StudentsCourse'
 >;

@@ -1,6 +1,12 @@
+import {courseDetailsTypes} from '@common/types';
+
 type MainStackParamList = {
-  LandingPage: undefined;
   Login: undefined;
+  LandingPage: undefined;
+  StudentsCourse: {
+    course: courseDetailsTypes;
+  };
+  AvailableCourses: undefined;
   BottomTabNavigator: undefined;
 };
 

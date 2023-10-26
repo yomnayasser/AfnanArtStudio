@@ -25,7 +25,7 @@ const VerticalCoursesList = ({course}: Props) => {
       style={styles.container}
       onPress={() => {
         !course.disabled
-          ? navigation.navigate('CourseDetails', {course: course})
+          ? navigation.navigate('StudentsCourse', {course: course})
           : () => {};
       }}>
       <View style={styles.row}>

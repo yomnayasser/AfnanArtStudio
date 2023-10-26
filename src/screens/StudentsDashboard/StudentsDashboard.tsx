@@ -2,20 +2,13 @@ import React from 'react';
 import {t} from 'i18next';
 import {useNavigation} from '@react-navigation/native';
 
-import {
-  StudentsDashboardScreen,
-  StudentsDashboardScreenRouteProp,
-} from '@navigation/navigationTypes';
-import {Text, View} from '@wrappers/index';
+import {View} from '@wrappers/index';
 import styles from './StudentsDashboard.styles';
 import {HorizontalCoursesList, Header} from '@components/index';
+import {AvailableCoursesScreen} from '@navigation/navigationTypes';
 
-type Props = {
-  route: StudentsDashboardScreenRouteProp;
-};
-
-const StudentsDashboard = ({route}: Props) => {
-  const navigation = useNavigation<StudentsDashboardScreen>();
+const StudentsDashboard = () => {
+  const navigation = useNavigation<AvailableCoursesScreen>();
   const headerOnPress = () => {
     navigation.navigate('AvailableCourses');
   };

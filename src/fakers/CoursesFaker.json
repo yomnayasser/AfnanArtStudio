@@ -76,7 +76,7 @@
     "packagesPrices": [["2000"]],
     "notes": ["Materials are included"],
     "sessionDuration": 3,
-    "disabled": false,
+    "disabled": true,
     "sliderImages": ["resin1", "resin2", "resin3", "resin4"]
   },
   {
@@ -93,7 +93,7 @@
     "packagesPrices": [["1500"]],
     "notes": ["Materials included", "No Experience Needed"],
     "sessionDuration": 3,
-    "disabled": false,
+    "disabled": true,
     "sliderImages": ["mosaic1", "mosaic2", "mosaic3"]
   }
 ]

@@ -6,6 +6,7 @@ export default StyleSheet.create({
   container: {
     ...layouts.row,
     flexWrap: 'wrap',
+    ...layouts.shadowProp,
   },
   innerContainer: {
     ...layouts.mx.lg,

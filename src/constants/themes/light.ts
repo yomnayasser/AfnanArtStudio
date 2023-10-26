@@ -102,4 +102,7 @@ export const light = {
 
   //loader
   loaderColor: primary.default,
+
+  //card
+  cardBg: primary.bg,
 };

@@ -1,16 +1,22 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, {PropsWithChildren, useContext, useEffect} from 'react';
+import React, {useContext, useEffect} from 'react';
+
 import {
   StudentCourseContext,
   StudentCourseContextProvider,
 } from '@store/contexts/StudentCourseContext';
-import {Text, View} from '@wrappers/index';
-import CourseDetails from './CourseDetails/CourseDetails';
-import EnrollCourse from './EnrollCourse/EnrollCourse';
-import {CourseDetailsScreenRouteProp} from '@navigation/navigationTypes';
+import {View} from '@wrappers/index';
+import {CourseDetails} from '@screens/index';
+import {courseDetailsTypes} from '@common/types';
 import styles from './StudentsCourseWrapper.styles';
+import {StudentsCourseScreenRouteProp} from '@navigation/navigationTypes';
+
 type Props = {
-  route: CourseDetailsScreenRouteProp;
+  route: StudentsCourseScreenRouteProp;
+};
+
+type studentCourseProp = {
+  course: courseDetailsTypes;
 };
 
 const StudentsCourseWrapper = ({route}: Props) => {
@@ -25,7 +31,7 @@ const steps = {
   1: <CourseDetails />,
   // 2: <EnrollCourse />,
 };
-const StudentsCourse = ({course}) => {
+const StudentsCourse = ({course}: studentCourseProp) => {
   const {Value, setValue} = useContext(StudentCourseContext);
   useEffect(() => {
     setValue({...Value, course: course});

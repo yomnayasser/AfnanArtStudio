@@ -6,5 +6,6 @@ export default StyleSheet.create({
   container: {
     ...layouts.mx.xl,
     ...layouts.mb.xl,
+    ...layouts.mt.xl,
   },
 });
