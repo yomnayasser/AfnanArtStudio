@@ -2,24 +2,27 @@
 import {t} from 'i18next';
 import * as React from 'react';
 import {ScrollView, View} from 'react-native';
-import {useNavigation} from '@react-navigation/native';
 import {TabView, SceneMap, TabBar} from 'react-native-tab-view';
 
 import {Text} from '@wrappers/index';
-import {courseDetailsTypes} from '@common/types';
 import styles from './CourseDetailsTabView.styles';
-import {Button, Header, List, Table} from '@components/index';
-import {EnrollCourseScreen} from '@navigation/navigationTypes';
+import {courseDetailsTypes, feedbackTypes} from '@common/types';
+import {
+  Button,
+  FeedbackCard,
+  Header,
+  List,
+  Separator,
+  Table,
+} from '@components/index';
 
 type Props = {
   course: courseDetailsTypes;
-};
-type FirstRouteProp = {
-  course: courseDetailsTypes;
-  navigation: EnrollCourseScreen;
+  incrementStep: Function;
+  feedbacks?: feedbackTypes[];
 };
 
-const FirstRoute = ({course, navigation}: FirstRouteProp) => (
+const FirstRoute = ({course, incrementStep}: Props) => (
   <ScrollView style={styles.container}>
     <Header headerText={t('what_to_expect')} style={styles.title} />
     <List number listData={course?.outcomes} />
@@ -41,26 +44,34 @@ const FirstRoute = ({course, navigation}: FirstRouteProp) => (
       style={styles.button}
       title={t('enroll')}
       onPress={() => {
-        navigation.navigate('EnrollCourse', {course: course});
+        incrementStep();
       }}
     />
   </ScrollView>
 );
 
-const SecondRoute = () => (
-  <View style={{flex: 1, backgroundColor: '#673ab7'}} />
+const SecondRoute = ({feedbacks}: Props) => (
+  <View>
+    {feedbacks?.map((feedback, index) => {
+      return (
+        <>
+          <FeedbackCard feedback={feedback} />
+          {index !== feedbacks.length - 1 && <Separator />}
+        </>
+      );
+    })}
+  </View>
 );
 
-const CourseDetailsTabView = ({course}: Props) => {
+const CourseDetailsTabView = ({course, incrementStep, feedbacks}: Props) => {
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
     {key: 'first', title: 'Overview'},
     {key: 'second', title: 'Feedback'},
   ]);
-  const navigation = useNavigation<EnrollCourseScreen>();
   const renderScene = SceneMap({
-    first: () => <FirstRoute course={course} navigation={navigation} />,
-    second: SecondRoute,
+    first: () => <FirstRoute course={course} incrementStep={incrementStep} />,
+    second: () => <SecondRoute feedbacks={feedbacks} />,
   });
 
   return (

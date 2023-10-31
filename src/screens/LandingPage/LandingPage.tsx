@@ -1,32 +1,22 @@
-import {IMAGES} from '@constants/assets';
-import {useNavigation} from '@react-navigation/native';
-import {Image, View} from '@wrappers/index';
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, {useEffect} from 'react';
+import {useNavigation} from '@react-navigation/native';
 
-type Props = {};
+import {IMAGES} from '@constants/assets';
+import styles from './LandingPage.styles';
+import {Image, View} from '@wrappers/index';
+import {LoginScreenNavigationProp} from '@navigation/navigationTypes';
 
 const LandingPage = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<LoginScreenNavigationProp>();
   useEffect(() => {
     setTimeout(() => {
       navigation.navigate('Login');
     }, 1000);
   }, []);
   return (
-    <View
-      style={{
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '100%',
-      }}>
-      <Image
-        source={IMAGES.Logo}
-        style={{
-          width: 200,
-          height: 200,
-        }}
-      />
+    <View style={styles.container}>
+      <Image source={IMAGES.Logo} style={styles.image} />
     </View>
   );
 };

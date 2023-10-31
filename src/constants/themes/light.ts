@@ -87,6 +87,7 @@ export const light = {
 
   //icons
   backIcon: gray.light1,
+  startIcon: primary.default,
 
   //table
   tableBorderColor: primary.default,

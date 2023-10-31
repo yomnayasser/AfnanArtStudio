@@ -20,7 +20,7 @@ const EnrollCourse = () => {
         }}
       />
       <View style={styles.container}>
-        <Text xxMediumSize semiBold style={styles.header}>
+        <Text xMediumSize semiBold style={styles.header}>
           Select Suitable Package:
         </Text>
         <View style={styles.radioButton}>
@@ -28,7 +28,7 @@ const EnrollCourse = () => {
         </View>
       </View>
       <View style={styles.container}>
-        <Text xxMediumSize semiBold style={styles.header}>
+        <Text xMediumSize semiBold style={styles.header}>
           How Would You Like To Pay:
         </Text>
         <View style={styles.radioButton}>

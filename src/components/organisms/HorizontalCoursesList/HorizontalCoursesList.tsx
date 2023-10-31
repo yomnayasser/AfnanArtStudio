@@ -5,10 +5,10 @@ import styles from './HorizontalCoursesList.styles';
 import {CoursesFaker} from '@fakers/index';
 import {IMAGES} from '@constants/assets';
 import {useNavigation} from '@react-navigation/native';
-import {StudentsDashboardScreen} from '@navigation/navigationTypes';
+import {StudentsCourseScreen} from '@navigation/navigationTypes';
 
 const HorizontalCoursesList = () => {
-  const navigation = useNavigation<StudentsDashboardScreen>();
+  const navigation = useNavigation<StudentsCourseScreen>();
   const checkDisabled = (disabled: boolean) => {
     return disabled ? styles.imageDisabled : null;
   };

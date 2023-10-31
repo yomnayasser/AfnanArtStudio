@@ -23,6 +23,5 @@ export default StyleSheet.create({
   },
   indicatorStyle: {
     backgroundColor: getCurrentTheme().def.tabViewActiveColor,
-    // backgroundColor: getCurrentTheme().def.tabViewBg,
   },
 });

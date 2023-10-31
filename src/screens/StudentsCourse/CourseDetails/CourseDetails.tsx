@@ -9,7 +9,7 @@ import {CourseDetailsTabView, ImageHeader} from '@components/index';
 import {StudentCourseContext} from '@store/index';
 
 const CourseDetails = () => {
-  const {Value} = useContext(StudentCourseContext);
+  const {Value, incrementStep} = useContext(StudentCourseContext);
   const [sliderImages, setSliderImages] = useState<string[]>([]);
 
   useEffect(() => {
@@ -30,7 +30,11 @@ const CourseDetails = () => {
           style={styles.headerContainer}
         />
       )}
-      <CourseDetailsTabView course={Value?.course} />
+      <CourseDetailsTabView
+        course={Value?.course}
+        incrementStep={incrementStep}
+        feedbacks={Value?.course?.feedbacks}
+      />
     </View>
   );
 };

@@ -83,3 +83,9 @@ export type courseDetailsTypes = {
   disabled: boolean;
   sliderImages: string[];
 };
+
+export type feedbackTypes = {
+  user: string;
+  feedback: string;
+  starsRate: number;
+};

@@ -7,12 +7,12 @@ import {View} from '@wrappers/index';
 import styles from './LoginForm.styles';
 import {Button, Input} from '@components/index';
 import {LoginFormSchema} from '@common/validations';
-import {LoginScreenNavigationProp} from '@navigation/navigationTypes';
+import {BottomTabNavigatorProp} from '@navigation/navigationTypes';
 import {LoginFormValues} from '@common/types';
 import {UserFaker} from '@fakers/index';
 
 const LoginForm = () => {
-  const navigation = useNavigation<LoginScreenNavigationProp>();
+  const navigation = useNavigation<BottomTabNavigatorProp>();
   const {
     control,
     handleSubmit,
@@ -29,7 +29,7 @@ const LoginForm = () => {
     UserFaker.map(user => {
       if (user.username === data.userName) {
         navigation.navigate('BottomTabNavigator', {
-          screen: 'StudentNavigator',
+          screen: 'StudentsDashboard',
           params: {
             user: user,
           },

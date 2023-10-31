@@ -12,7 +12,24 @@
     "notes": ["No Materials included", "No Experience Needed"],
     "sessionDuration": 3,
     "disabled": false,
-    "sliderImages": ["acrylic1", "acrylic2", "acrylic3"]
+    "sliderImages": ["acrylic1", "acrylic2", "acrylic3"],
+    "feedbacks": [
+      {
+        "user": "Yomna",
+        "feedback": "Really enjoyed the course and would totally recommend it to my friends",
+        "starsRate": 5
+      },
+      {
+        "user": "anonymous",
+        "feedback": "Really good course",
+        "starsRate": 4
+      },
+      {
+        "user": "Heba",
+        "feedback": "Great place , great people!",
+        "starsRate": 5
+      }
+    ]
   },
   {
     "name": "Oil",
@@ -27,7 +44,24 @@
     "notes": ["No Materials included"],
     "sessionDuration": 3,
     "disabled": false,
-    "sliderImages": ["oil1", "oil2", "oil3", "oil4"]
+    "sliderImages": ["oil1", "oil2", "oil3", "oil4"],
+    "feedbacks": [
+      {
+        "user": "Yomna",
+        "feedback": "Really enjoyed the course and would totally recommend it to my friends",
+        "starsRate": 5
+      },
+      {
+        "user": "anonymous",
+        "feedback": "Really good course",
+        "starsRate": 4
+      },
+      {
+        "user": "Heba",
+        "feedback": "Great place , great people!",
+        "starsRate": 5
+      }
+    ]
   },
   {
     "name": "Sketching",
@@ -44,7 +78,24 @@
     "notes": [],
     "sessionDuration": 3,
     "disabled": false,
-    "sliderImages": ["sketching1", "sketching2", "sketching3", "sketching4"]
+    "sliderImages": ["sketching1", "sketching2", "sketching3", "sketching4"],
+    "feedbacks": [
+      {
+        "user": "Yomna",
+        "feedback": "Really enjoyed the course and would totally recommend it to my friends",
+        "starsRate": 5
+      },
+      {
+        "user": "anonymous",
+        "feedback": "Really good course",
+        "starsRate": 4
+      },
+      {
+        "user": "Heba",
+        "feedback": "Great place , great people!",
+        "starsRate": 5
+      }
+    ]
   },
   {
     "name": "Kids",
@@ -61,7 +112,24 @@
     "notes": ["Materials are included"],
     "sessionDuration": 2,
     "disabled": false,
-    "sliderImages": ["Kid1", "Kid2", "Kid3", "Kid4", "Kid5"]
+    "sliderImages": ["Kid1", "Kid2", "Kid3", "Kid4", "Kid5"],
+    "feedbacks": [
+      {
+        "user": "Yomna",
+        "feedback": "Really enjoyed the course and would totally recommend it to my friends",
+        "starsRate": 5
+      },
+      {
+        "user": "anonymous",
+        "feedback": "Really good course",
+        "starsRate": 4
+      },
+      {
+        "user": "Heba",
+        "feedback": "Great place , great people!",
+        "starsRate": 5
+      }
+    ]
   },
   {
     "name": "Resin",
@@ -77,7 +145,24 @@
     "notes": ["Materials are included"],
     "sessionDuration": 3,
     "disabled": true,
-    "sliderImages": ["resin1", "resin2", "resin3", "resin4"]
+    "sliderImages": ["resin1", "resin2", "resin3", "resin4"],
+    "feedbacks": [
+      {
+        "user": "Yomna",
+        "feedback": "Really enjoyed the course and would totally recommend it to my friends",
+        "starsRate": 5
+      },
+      {
+        "user": "anonymous",
+        "feedback": "Really good course",
+        "starsRate": 4
+      },
+      {
+        "user": "Heba",
+        "feedback": "Great place , great people!",
+        "starsRate": 5
+      }
+    ]
   },
   {
     "name": "Mosaic",
@@ -94,6 +179,23 @@
     "notes": ["Materials included", "No Experience Needed"],
     "sessionDuration": 3,
     "disabled": true,
-    "sliderImages": ["mosaic1", "mosaic2", "mosaic3"]
+    "sliderImages": ["mosaic1", "mosaic2", "mosaic3"],
+    "feedbacks": [
+      {
+        "user": "Yomna",
+        "feedback": "Really enjoyed the course and would totally recommend it to my friends",
+        "starsRate": 5
+      },
+      {
+        "user": "anonymous",
+        "feedback": "Really good course",
+        "starsRate": 4
+      },
+      {
+        "user": "Heba",
+        "feedback": "Great place , great people!",
+        "starsRate": 5
+      }
+    ]
   }
 ]

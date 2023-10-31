@@ -14,6 +14,15 @@ export type AvailableCoursesScreen = StackNavigationProp<
   'AvailableCourses'
 >;
 
+export type BottomTabNavigatorProp = StackNavigationProp<
+  MainStackParamList,
+  'BottomTabNavigator'
+>;
+export type StudentsCourseScreen = StackNavigationProp<
+  MainStackParamList,
+  'StudentsCourse'
+>;
+
 //route
 export type StudentsCourseScreenRouteProp = RouteProp<
   MainStackParamList,

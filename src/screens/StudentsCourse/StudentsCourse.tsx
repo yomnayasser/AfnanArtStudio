@@ -6,9 +6,9 @@ import {
   StudentCourseContextProvider,
 } from '@store/contexts/StudentCourseContext';
 import {View} from '@wrappers/index';
-import {CourseDetails} from '@screens/index';
 import {courseDetailsTypes} from '@common/types';
 import styles from './StudentsCourseWrapper.styles';
+import {CourseDetails, EnrollCourse} from '@screens/index';
 import {StudentsCourseScreenRouteProp} from '@navigation/navigationTypes';
 
 type Props = {
@@ -22,20 +22,20 @@ type studentCourseProp = {
 const StudentsCourseWrapper = ({route}: Props) => {
   return (
     <StudentCourseContextProvider>
-      <StudentsCourse course={route?.params.course} />
+      <StudentsCourse course={route?.params?.course} />
     </StudentCourseContextProvider>
   );
 };
 
-const steps = {
-  1: <CourseDetails />,
-  // 2: <EnrollCourse />,
-};
 const StudentsCourse = ({course}: studentCourseProp) => {
+  const steps = {
+    1: <CourseDetails />,
+    2: <EnrollCourse />,
+  };
   const {Value, setValue} = useContext(StudentCourseContext);
   useEffect(() => {
     setValue({...Value, course: course});
-  }, []);
+  }, [course]);
   return (
     <View style={styles.container}>
       {steps[Value.activeStep as keyof typeof steps]}
