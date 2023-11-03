@@ -21,6 +21,7 @@ type props = {
   loading?: boolean;
   style?: ThemedViewStyle;
   loadingColor?: string;
+  buttonColor?: string;
 };
 
 const Button = ({

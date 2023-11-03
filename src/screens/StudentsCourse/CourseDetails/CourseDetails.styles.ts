@@ -1,5 +1,7 @@
 import {StyleSheet} from 'react-native';
-import {layouts} from '@constants/styles';
+import {getCurrentTheme} from 'react-native-theming';
+
+import {layouts, spacing} from '@constants/styles';
 
 export default StyleSheet.create({
   container: {
@@ -7,5 +9,16 @@ export default StyleSheet.create({
   },
   headerContainer: {
     ...layouts.mb.sm,
+  },
+  buttonContainer: {
+    ...layouts.allCentered,
+    backgroundColor: getCurrentTheme().def.textInputBg,
+    ...layouts.shadowProp2,
+  },
+  button: {
+    ...layouts.mx.xl,
+    ...layouts.py.md,
+    marginVertical: spacing.xxl,
+    width: '70%',
   },
 });

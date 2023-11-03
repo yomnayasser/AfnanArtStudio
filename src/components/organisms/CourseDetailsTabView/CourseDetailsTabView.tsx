@@ -18,11 +18,14 @@ import {
 
 type Props = {
   course: courseDetailsTypes;
-  incrementStep: Function;
+  incrementStep?: Function;
   feedbacks?: feedbackTypes[];
 };
 
-const FirstRoute = ({course, incrementStep}: Props) => (
+type feedbackProps = {
+  feedbacks: feedbackTypes[] | undefined;
+};
+const FirstRoute = ({course}: Props) => (
   <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
     <Header headerText={t('what_to_expect')} style={styles.title} />
     <List number listData={course?.outcomes} />
@@ -43,7 +46,7 @@ const FirstRoute = ({course, incrementStep}: Props) => (
   </ScrollView>
 );
 
-const SecondRoute = ({feedbacks}: Props) => (
+const SecondRoute = ({feedbacks}: feedbackProps) => (
   <ScrollView showsVerticalScrollIndicator={false}>
     {feedbacks?.map((feedback, index) => {
       return (

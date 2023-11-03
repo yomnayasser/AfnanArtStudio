@@ -9,15 +9,10 @@ export default StyleSheet.create({
     ...layouts.mb.xxl,
     ...layouts.flexed,
   },
-  title: {...layouts.mt.xxxl},
+  title: {...layouts.mt.xl},
   subHeader: {...layouts.mt.xl},
   note: {...layouts.my.sm},
-  button: {
-    ...layouts.allCentered,
-    ...layouts.mx.md,
-    ...layouts.mt.xl,
-    ...layouts.mb.xxxl,
-  },
+
   tabBar: {
     backgroundColor: 'transparent',
     ...layouts.py.sm,

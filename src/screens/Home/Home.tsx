@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <ScrollView style={styles.container} showsHorizontalScrollIndicator={false}>
       <Text largeSize semiBold style={styles.text}>
-        {t('welcome')}, {user.firstName}
+        {t('welcome')}, {user.firstName}.
       </Text>
       <Header
         headerText={t('all_available_courses')}
