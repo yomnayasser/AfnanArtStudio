@@ -12,13 +12,11 @@ export default StyleSheet.create({
   },
   buttonContainer: {
     ...layouts.allCentered,
-    backgroundColor: getCurrentTheme().def.textInputBg,
+    backgroundColor: 'white',
     ...layouts.shadowProp2,
   },
   button: {
-    ...layouts.mx.xl,
     ...layouts.py.md,
     marginVertical: spacing.xxl,
-    width: '70%',
   },
 });

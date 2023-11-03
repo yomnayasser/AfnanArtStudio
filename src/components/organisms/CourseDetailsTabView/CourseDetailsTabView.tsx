@@ -33,6 +33,7 @@ const FirstRoute = ({course}: Props) => (
     <Table
       tableData={course?.packagesPrices}
       tableHead={course?.packagesName}
+      style={styles.table}
     />
     <Text mediumSize style={styles.note}>
       {course?.sessionDuration + ' ' + t('hours_per_session')}
@@ -76,11 +77,7 @@ const CourseDetailsTabView = ({course, incrementStep, feedbacks}: Props) => {
         <TabBar
           {...props}
           renderLabel={({route}) => {
-            return (
-              <Text medium xMediumSize>
-                {route.title}
-              </Text>
-            );
+            return <Text medium>{route.title}</Text>;
           }}
           indicatorStyle={styles.indicatorStyle}
           style={styles.tabBar}

@@ -17,7 +17,10 @@ const Home = () => {
     navigation.navigate('AvailableCourses');
   };
   return (
-    <ScrollView style={styles.container} showsHorizontalScrollIndicator={false}>
+    <ScrollView
+      style={styles.container}
+      showsHorizontalScrollIndicator={false}
+      showsVerticalScrollIndicator={false}>
       <Text largeSize semiBold style={styles.text}>
         {t('welcome')}, {user.firstName}.
       </Text>

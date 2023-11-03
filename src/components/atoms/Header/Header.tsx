@@ -9,13 +9,14 @@ type Props = {
   iconName?: string;
   onPressHeader?: (event: GestureResponderEvent) => void;
   style?: ViewStyle;
+  badge?: number;
 };
 
-const Header = ({headerText, iconName, onPressHeader, style}: Props) => {
+const Header = ({headerText, iconName, onPressHeader, style, badge}: Props) => {
   return (
     <View style={style ? style : null}>
       {onPressHeader ? (
-        <>
+        <View style={styles.row}>
           <TouchableOpacity style={styles.container} onPress={onPressHeader}>
             <Text color={'@primaryButtonBG'} xMediumSize medium>
               {headerText}
@@ -29,11 +30,16 @@ const Header = ({headerText, iconName, onPressHeader, style}: Props) => {
               />
             )}
           </TouchableOpacity>
-        </>
+          {badge && badge > 1 && (
+            <View style={styles.badge}>
+              <Text center style={styles.badgeText}>
+                {badge}
+              </Text>
+            </View>
+          )}
+        </View>
       ) : (
-        <Text xMediumSize medium>
-          {headerText}
-        </Text>
+        <Text medium>{headerText}</Text>
       )}
     </View>
   );

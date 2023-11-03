@@ -26,9 +26,13 @@ export default StyleSheet.create({
     ...layouts.row,
     ...layouts.justifyBetween,
     ...layouts.mt.mlg,
-    flexWrap: 'wrap',
+    // flexWrap: 'wrap',
   },
   pending: {
-    ...layouts.my.sm,
+    ...layouts.py.sm,
+  },
+  dashboardText: {
+    width: 200,
+    backgroundColor: 'red',
   },
 });

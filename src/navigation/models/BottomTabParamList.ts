@@ -9,6 +9,7 @@ type BottomTabParamList = {
     };
   };
   Profile: undefined;
+  Dashboard: undefined;
 };
 
 export default BottomTabParamList;

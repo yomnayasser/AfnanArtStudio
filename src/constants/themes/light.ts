@@ -67,6 +67,9 @@ export const light = {
   dangerButtonBG: error.default,
   dangerPressedButtonBG: error.dark,
 
+  //light button
+  lightButtonBG: white.default,
+  lightPressedButtonBG: primary.bg,
   //outlined
   outlinedPrimaryButtonBG: white.default,
   outlinedPrimaryButtonBorder: primary.default,
@@ -90,6 +93,8 @@ export const light = {
   //icons
   backIcon: gray.light1,
   startIcon: primary.default,
+  bottomTabActiveIcon: primary.default,
+  bottomTabInActiveIcon: black.default,
 
   //table
   tableBorderColor: primary.default,

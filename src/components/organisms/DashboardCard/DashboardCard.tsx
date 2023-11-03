@@ -18,10 +18,10 @@ const DashboardCard = ({enrolledCourses}: Props) => {
   return (
     <View style={styles.container}>
       <Header
-        headerText={'Your Dashboard'}
-        iconName="arrow-right-3"
+        headerText={t('your_enrolled_course')}
         onPressHeader={() => {}}
         style={styles.header}
+        badge={enrolledCourses?.length}
       />
       <View style={styles.innerContainer}>
         <ProgressCircle
@@ -31,33 +31,27 @@ const DashboardCard = ({enrolledCourses}: Props) => {
           title={t('sessions')}
         />
         <Text medium xMediumSize center style={styles.text}>
-          {course?.name + ' ' + 'Course'}
+          {course?.name + ' ' + t('course')}
         </Text>
         <Text center>{finishedSessions + '/' + course?.enrollmentPeriod}</Text>
       </View>
       <View style={styles.row}>
         <View>
           <Text smallSize>
-            {t('startDate')}: <Text smallSize>{course?.startDate}</Text>
+            {t('startDate')} : {course?.startDate}
           </Text>
 
           <Text smallSize style={styles.pending}>
-            {t('cashback')}:{' '}
-            <Text smallSize>
-              {course?.cashBack} {t('egp')}
-            </Text>
+            {t('wallet')} : {course?.cashBack} {t('egp')}
           </Text>
         </View>
         <View>
           <Text smallSize color={'@errorText'}>
-            {t('expire_date')}: <Text smallSize>{course?.startDate}</Text>
+            {t('expire_date')} : {course?.startDate}
           </Text>
 
           <Text smallSize style={styles.pending} color={'@errorText'}>
-            {t('remaining_fees')}:{' '}
-            <Text smallSize color={'@errorText'}>
-              {course?.pendingFees} {t('egp')}
-            </Text>
+            {t('remaining_fees')} : {course?.pendingFees} {t('egp')}
           </Text>
         </View>
       </View>

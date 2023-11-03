@@ -13,7 +13,7 @@ export default StyleSheet.create({
   },
 
   icon: {
-    ...layouts.mt.mmlg,
+    ...layouts.mt.lg,
     ...layouts.me.sm,
   },
   innerContainer: {
@@ -36,6 +36,6 @@ export default StyleSheet.create({
     ...layouts.mb.md,
   },
   actionIcons: {
-    ...layouts.mx.sm,
+    ...layouts.mx.md,
   },
 });

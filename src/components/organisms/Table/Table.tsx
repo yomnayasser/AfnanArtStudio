@@ -5,31 +5,37 @@ import {
   Row,
   Rows,
 } from 'react-native-table-component';
+import {ViewStyle} from 'react-native';
 
 import styles from './Table.styles';
+import {View} from '@wrappers/index';
+
 type Props = {
   tableHead: string[];
   tableData: string[][];
+  style?: ViewStyle;
 };
 
-const Table = ({tableHead, tableData}: Props) => {
+const Table = ({tableHead, tableData, style}: Props) => {
   return (
-    <TableRN style={styles.table} borderStyle={styles.tableContainer}>
-      <Row
-        data={tableHead}
-        flexArr={[1, 1, 1]}
-        style={styles.head}
-        textStyle={styles.text}
-      />
-      <TableWrapper style={styles.wrapper}>
-        <Rows
-          data={tableData}
+    <View style={style ? style : {}}>
+      <TableRN style={styles.table} borderStyle={styles.tableContainer}>
+        <Row
+          data={tableHead}
           flexArr={[1, 1, 1]}
+          style={styles.head}
           textStyle={styles.text}
-          style={styles.row}
         />
-      </TableWrapper>
-    </TableRN>
+        <TableWrapper style={styles.wrapper}>
+          <Rows
+            data={tableData}
+            flexArr={[1, 1, 1]}
+            textStyle={styles.text}
+            style={styles.row}
+          />
+        </TableWrapper>
+      </TableRN>
+    </View>
   );
 };
 

@@ -9,7 +9,7 @@ export default StyleSheet.create({
     ...layouts.mb.xxl,
     ...layouts.flexed,
   },
-  title: {...layouts.mt.xl},
+  title: {...layouts.my.xl},
   subHeader: {...layouts.mt.xl},
   note: {...layouts.my.sm},
 
@@ -19,5 +19,8 @@ export default StyleSheet.create({
   },
   indicatorStyle: {
     backgroundColor: getCurrentTheme().def.tabViewActiveColor,
+  },
+  table: {
+    ...layouts.mx.md,
   },
 });

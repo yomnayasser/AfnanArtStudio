@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 import layouts from '@constants/styles/layouts';
-import { px } from '@common/utils';
+import {px} from '@common/utils';
 
 export default StyleSheet.create({
   container: {...layouts.allCentered, ...layouts.my.xxxl},
@@ -9,6 +9,6 @@ export default StyleSheet.create({
   },
   button: {
     ...layouts.mt.xxl,
-    width:px(280)
+    width: px(280),
   },
 });

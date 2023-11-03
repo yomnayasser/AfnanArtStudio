@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {GestureResponderEvent} from 'react-native';
 import {getCurrentTheme} from 'react-native-theming';
@@ -16,6 +17,7 @@ type props = {
   primary?: boolean;
   secondary?: boolean;
   danger?: boolean;
+  light?: boolean;
   outlined?: boolean;
   disabled?: boolean;
   loading?: boolean;
@@ -31,6 +33,7 @@ const Button = ({
   primary,
   secondary,
   danger,
+  light,
   disabled,
   outlined,
   loading,
@@ -43,6 +46,8 @@ const Button = ({
     ? 'secondary'
     : danger
     ? 'danger'
+    : light
+    ? 'light'
     : 'primary';
 
   return (
@@ -84,6 +89,8 @@ const Button = ({
                         `outlined${capitalize(variantName ?? '')}ButtonText`
                       ],
                   }
+                : variantName === 'light'
+                ? {color: '@primaryText'}
                 : styles.buttonText
             }>
             {title}

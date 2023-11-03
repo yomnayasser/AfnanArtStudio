@@ -12,6 +12,6 @@ export default StyleSheet.create({
     ...layouts.my.md,
   },
   text: {
-    ...layouts.my.xl,
+    ...layouts.mt.xl,
   },
 });
