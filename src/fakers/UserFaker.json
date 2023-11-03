@@ -2,8 +2,19 @@
   {
     "username": "Y",
     "password": "123!456yY",
-    "FirstName": "Yomna",
-    "LastName": "Yasser",
-    "Age": 24
+    "firstName": "Yomna",
+    "lastName": "Yasser",
+    "age": 24,
+    "enrolledCourses": [
+      {
+        "name": "Acrylic",
+        "sessionsLeft": 6,
+        "pendingFees": 300,
+        "cashBack": 0,
+        "startDate": "8/10/2023",
+        "endDate": "8/12/2023",
+        "enrollmentPeriod": 14
+      }
+    ]
   }
 ]

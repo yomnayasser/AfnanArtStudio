@@ -11,7 +11,7 @@ const Login = () => {
   return (
     <View style={styles.container}>
       <Text largeSize center color={'@darkText'}>
-        {t('welcome')}
+        {t('welcome_to')}
       </Text>
       <Text largeSize center medium color={'@darkText'}>
         {t('afnan_art_studio')} !

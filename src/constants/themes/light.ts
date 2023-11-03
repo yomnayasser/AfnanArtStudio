@@ -52,6 +52,7 @@ export const light = {
   primaryButton2: primary.light,
   primaryText: primary.default,
   disabledText: gray.light,
+  errorText: error.default,
 
   // Primary button
   primaryButtonBG: primary.default,
@@ -106,4 +107,10 @@ export const light = {
 
   //card
   cardBg: primary.bg,
+
+  //progress circle
+  progressCircle: primary.default,
+
+  //Bg
+  primaryBg: primary.bg,
 };

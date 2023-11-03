@@ -7,11 +7,7 @@ type MainStackParamList = {
     course: courseDetailsTypes;
   };
   AvailableCourses: undefined;
-  BottomTabNavigator: {
-    BottomTabNavigator: {
-      user: any;
-    };
-  };
+  BottomTabNavigator: undefined;
 };
 
 export default MainStackParamList;

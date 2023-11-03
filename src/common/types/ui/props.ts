@@ -89,3 +89,13 @@ export type feedbackTypes = {
   feedback: string;
   starsRate: number;
 };
+
+export interface enrolledCourses {
+  name: string;
+  sessionsLeft: number;
+  pendingFees: number;
+  cashBack: number;
+  startDate: string;
+  endDate: string;
+  enrollmentPeriod: number;
+}

@@ -23,7 +23,7 @@ type Props = {
 };
 
 const FirstRoute = ({course, incrementStep}: Props) => (
-  <ScrollView style={styles.container}>
+  <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
     <Header headerText={t('what_to_expect')} style={styles.title} />
     <List number listData={course?.outcomes} />
     <Header headerText=" Course Packages:" style={styles.title} />
@@ -40,18 +40,18 @@ const FirstRoute = ({course, incrementStep}: Props) => (
         <List listData={course?.notes} />
       </>
     )}
-    <Button
+    {/* <Button
       style={styles.button}
       title={t('enroll')}
       onPress={() => {
         incrementStep();
       }}
-    />
+    /> */}
   </ScrollView>
 );
 
 const SecondRoute = ({feedbacks}: Props) => (
-  <View>
+  <ScrollView showsVerticalScrollIndicator={false}>
     {feedbacks?.map((feedback, index) => {
       return (
         <>
@@ -60,7 +60,7 @@ const SecondRoute = ({feedbacks}: Props) => (
         </>
       );
     })}
-  </View>
+  </ScrollView>
 );
 
 const CourseDetailsTabView = ({course, incrementStep, feedbacks}: Props) => {

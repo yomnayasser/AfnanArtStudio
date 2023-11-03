@@ -1,5 +1,5 @@
 type BottomTabParamList = {
-  StudentsDashboard: {
+  Home: {
     user: {
       username: string;
       password: string;

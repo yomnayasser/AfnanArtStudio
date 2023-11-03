@@ -1,18 +1,22 @@
 import React from 'react';
 import {useForm} from 'react-hook-form';
+import {useDispatch} from 'react-redux';
 import {yupResolver} from '@hookform/resolvers/yup';
 import {useNavigation} from '@react-navigation/native';
 
 import {View} from '@wrappers/index';
+import {UserFaker} from '@fakers/index';
 import styles from './LoginForm.styles';
+import {setUserData} from '@store/index';
+import {LoginFormValues} from '@common/types';
 import {Button, Input} from '@components/index';
 import {LoginFormSchema} from '@common/validations';
 import {BottomTabNavigatorProp} from '@navigation/navigationTypes';
-import {LoginFormValues} from '@common/types';
-import {UserFaker} from '@fakers/index';
 
 const LoginForm = () => {
   const navigation = useNavigation<BottomTabNavigatorProp>();
+  const dispatch = useDispatch();
+
   const {
     control,
     handleSubmit,
@@ -28,12 +32,8 @@ const LoginForm = () => {
   const onSubmit = handleSubmit(data =>
     UserFaker.map(user => {
       if (user.username === data.userName) {
-        navigation.navigate('BottomTabNavigator', {
-          screen: 'StudentsDashboard',
-          params: {
-            user: user,
-          },
-        });
+        dispatch(setUserData(user));
+        navigation.navigate('BottomTabNavigator');
       }
     }),
   );

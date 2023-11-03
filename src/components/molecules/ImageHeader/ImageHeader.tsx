@@ -5,7 +5,7 @@ import {useNavigation} from '@react-navigation/native';
 
 import styles from './ImageHeader.styles';
 import {Pressable, Text, View} from '@wrappers/index';
-import {Icon, ImageSlider} from '@components/index';
+import {Button, Icon, ImageSlider} from '@components/index';
 
 type Props = {
   title: string;
@@ -27,24 +27,26 @@ const ImageHeader = ({title, subTitle, images, style}: Props) => {
         inactiveDotColor={inactiveDot}
         imageLoadingColor={loaderColor}
       />
-      <View style={styles.titleContainer}>
-        <Pressable
-          onPress={() => {
-            navigation.goBack();
-          }}>
-          <Icon name="arrow-left-2" style={styles.icon} />
-        </Pressable>
-        <View>
-          <Text xLargeSize medium style={styles.title} color={'@darkText'}>
-            {title}
-          </Text>
-          <Text
-            smallSize
-            medium
-            style={styles.subTitle}
-            color={'@secondaryPressedButtonBG'}>
-            {subTitle}
-          </Text>
+      <View style={styles.innerContainer}>
+        <View style={styles.titleContainer}>
+          <Pressable
+            onPress={() => {
+              navigation.goBack();
+            }}>
+            <Icon name="arrow-left-2" style={styles.icon} />
+          </Pressable>
+          <View style={styles.textContainer}>
+            <Text xLargeSize medium style={styles.title} color={'@darkText'}>
+              {title}
+            </Text>
+            <Text
+              mediumSize
+              medium
+              style={styles.subTitle}
+              color={'@secondaryPressedButtonBG'}>
+              {subTitle}
+            </Text>
+          </View>
         </View>
       </View>
     </View>

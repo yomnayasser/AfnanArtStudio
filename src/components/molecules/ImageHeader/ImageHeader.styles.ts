@@ -13,14 +13,25 @@ export default StyleSheet.create({
     ...layouts.mt.xl,
   },
   titleContainer: {
-    ...layouts.ms.lg,
     ...layouts.row,
   },
   subTitle: {
     ...layouts.ms.md,
   },
   icon: {
-    marginTop: px(30),
-    ...layouts.mx.sm,
+    marginTop: px(33),
+  },
+  innerContainer: {
+    ...layouts.mx.md,
+  },
+  enroll: {
+    marginStart: px(30),
+    ...layouts.underlined,
+  },
+  row: {
+    ...layouts.row,
+  },
+  textContainer: {
+    ...layouts.ms.xl,
   },
 });

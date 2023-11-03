@@ -10,7 +10,7 @@ export default StyleSheet.create({
   },
   innerContainer: {
     ...layouts.mx.lg,
-    ...layouts.my.lg,
+    ...layouts.my.sm,
   },
   imageContainer: {
     ...layouts.border,
