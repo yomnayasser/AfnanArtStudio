@@ -27,4 +27,11 @@ export default StyleSheet.create({
   iconContainer: {
     ...layouts.row,
   },
+  row: {
+    ...layouts.row,
+    ...layouts.justifyBetween,
+  },
+  date: {
+    ...layouts.mt.sm,
+  },
 });

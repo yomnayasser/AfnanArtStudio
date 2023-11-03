@@ -21,36 +21,43 @@ const ImageHeader = ({title, subTitle, images, style}: Props) => {
 
   return (
     <View style={style ? style : {}}>
+      <View style={styles.innerContainer}>
+        <View style={styles.row}>
+          <Pressable
+            style={styles.row}
+            onPress={() => {
+              navigation.goBack();
+            }}>
+            <Icon
+              name="arrow-left-2"
+              style={styles.icon}
+              size={22}
+              color="@primaryText"
+            />
+            <Text largeSize medium style={styles.title} color={'@primaryText'}>
+              {title}
+            </Text>
+          </Pressable>
+        </View>
+        <View style={styles.iconContainer}>
+          <Icon name="heart" style={styles.actionIcons} />
+          <Icon name="export-1" style={styles.actionIcons} />
+        </View>
+      </View>
       <ImageSlider
         images={images}
         dotColor={activeDot}
         inactiveDotColor={inactiveDot}
         imageLoadingColor={loaderColor}
       />
-      <View style={styles.innerContainer}>
-        <View style={styles.titleContainer}>
-          <Pressable
-            onPress={() => {
-              navigation.goBack();
-            }}>
-            <Icon name="arrow-left-2" style={styles.icon} />
-          </Pressable>
-          <View style={styles.textContainer}>
-            <Text xLargeSize medium style={styles.title} color={'@darkText'}>
-              {title}
-            </Text>
-            <Text
-              mediumSize
-              medium
-              style={styles.subTitle}
-              color={'@secondaryPressedButtonBG'}>
-              {subTitle}
-            </Text>
-          </View>
-        </View>
-      </View>
     </View>
   );
 };
 
 export default ImageHeader;
+{
+  /* <View style={styles.iconContainer}>
+          <Icon name="heart" style={styles.actionIcons} />
+          <Icon name="export-1" style={styles.actionIcons} />
+        </View> */
+}

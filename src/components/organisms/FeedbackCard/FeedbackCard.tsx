@@ -13,7 +13,12 @@ const FeedbackCard = ({feedback}: Props) => {
   return (
     <View style={styles.container}>
       <View style={styles.innerContainer}>
-        <Text medium>{feedback?.user}</Text>
+        <View style={styles.row}>
+          <Text medium>{feedback?.user}</Text>
+          <Text medium smallSize color={'@grayText'} style={styles.date}>
+            {feedback?.date}
+          </Text>
+        </View>
         <View style={styles.iconContainer}>
           {Array.from(Array(feedback?.starsRate), (e, i) => {
             return (

@@ -9,20 +9,19 @@ export default StyleSheet.create({
     height: 250,
   },
   title: {
-    ...layouts.ms.md,
-    ...layouts.mt.xl,
+    ...layouts.my.md,
   },
-  titleContainer: {
-    ...layouts.row,
-  },
-  subTitle: {
-    ...layouts.ms.md,
-  },
+
   icon: {
-    marginTop: px(33),
+    ...layouts.mt.mmlg,
+    ...layouts.me.sm,
   },
   innerContainer: {
-    ...layouts.mx.md,
+    ...layouts.px.md,
+    ...layouts.py.sm,
+    ...layouts.row,
+    ...layouts.justifyBetween,
+    marginTop: px(50),
   },
   enroll: {
     marginStart: px(30),
@@ -31,7 +30,12 @@ export default StyleSheet.create({
   row: {
     ...layouts.row,
   },
-  textContainer: {
-    ...layouts.ms.xl,
+  iconContainer: {
+    ...layouts.row,
+    alignSelf: 'flex-end',
+    ...layouts.mb.md,
+  },
+  actionIcons: {
+    ...layouts.mx.sm,
   },
 });

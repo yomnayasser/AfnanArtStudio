@@ -40,13 +40,6 @@ const FirstRoute = ({course, incrementStep}: Props) => (
         <List listData={course?.notes} />
       </>
     )}
-    {/* <Button
-      style={styles.button}
-      title={t('enroll')}
-      onPress={() => {
-        incrementStep();
-      }}
-    /> */}
   </ScrollView>
 );
 

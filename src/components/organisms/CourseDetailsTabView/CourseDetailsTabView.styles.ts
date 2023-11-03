@@ -6,6 +6,7 @@ import {layouts} from '@constants/styles';
 export default StyleSheet.create({
   container: {
     ...layouts.mx.xl,
+    ...layouts.mb.xxl,
     ...layouts.flexed,
   },
   title: {...layouts.mt.xxxl},

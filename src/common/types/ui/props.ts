@@ -88,6 +88,7 @@ export type feedbackTypes = {
   user: string;
   feedback: string;
   starsRate: number;
+  date: string;
 };
 
 export interface enrolledCourses {
