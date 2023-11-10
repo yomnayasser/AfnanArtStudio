@@ -1,6 +1,7 @@
 import {LogBox} from 'react-native';
 import React, {useEffect} from 'react';
 
+import '@sheets/index';
 import '@common/locales';
 import themes from '@constants/themes';
 import {Navigators} from '@navigation/index';

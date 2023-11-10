@@ -1,3 +1,4 @@
 export {default as List} from './List/List';
 export {default as ImageHeader} from './ImageHeader/ImageHeader';
-export {default as ScreenHeader} from './ScreenHeader/ScreenHeader';
+export {default as InnerHeader} from './InnerHeader/InnerHeader';
+export {default as SessionReminder} from './SessionReminder/SessionReminder';

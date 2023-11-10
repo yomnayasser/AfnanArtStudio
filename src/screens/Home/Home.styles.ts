@@ -9,7 +9,7 @@ export default StyleSheet.create({
     ...layouts.mx.xl,
   },
   header: {
-    ...layouts.my.md,
+    ...layouts.my.xl,
   },
   text: {
     ...layouts.mt.xl,

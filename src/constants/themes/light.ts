@@ -95,6 +95,7 @@ export const light = {
   startIcon: primary.default,
   bottomTabActiveIcon: primary.default,
   bottomTabInActiveIcon: black.default,
+  sortIcon: black.default,
 
   //table
   tableBorderColor: primary.default,
@@ -119,4 +120,11 @@ export const light = {
 
   //Bg
   primaryBg: primary.bg,
+
+  //radioButton
+  radioBorderColor: primary.default,
+  radioActiveColor: primary.dark,
+
+  //studentDashboard
+  studentDashboardCardBg: white.default,
 };

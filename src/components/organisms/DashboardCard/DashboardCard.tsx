@@ -25,7 +25,7 @@ const DashboardCard = ({enrolledCourses}: Props) => {
       />
       <View style={styles.innerContainer}>
         <ProgressCircle
-          size={60}
+          size={55}
           value={finishedSessions}
           total={course?.enrollmentPeriod}
           title={t('sessions')}

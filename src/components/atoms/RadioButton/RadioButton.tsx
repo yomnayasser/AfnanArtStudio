@@ -1,13 +1,13 @@
 import RadioGroup from 'react-native-radio-buttons-group';
-import React, {useState} from 'react';
+import React from 'react';
 
 type Props = {
   radioButtonData: any;
+  setSelectedId: (selectedId: string) => void;
+  selectedId: string;
 };
 
-const RadioButton = ({radioButtonData}: Props) => {
-  const [selectedId, setSelectedId] = useState();
-
+const RadioButton = ({radioButtonData, setSelectedId, selectedId}: Props) => {
   return (
     <RadioGroup
       radioButtons={radioButtonData}

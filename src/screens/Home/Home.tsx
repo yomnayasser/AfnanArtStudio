@@ -24,6 +24,7 @@ const Home = () => {
       <Text largeSize semiBold style={styles.text}>
         {t('welcome')}, {user.firstName}.
       </Text>
+
       <Header
         headerText={t('all_available_courses')}
         iconName="arrow-right-3"
@@ -33,7 +34,6 @@ const Home = () => {
         style={styles.header}
       />
       <HorizontalCoursesList />
-
       <DashboardCard enrolledCourses={user?.enrolledCourses} />
     </ScrollView>
   );

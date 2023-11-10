@@ -1,45 +1,29 @@
 import {StyleSheet} from 'react-native';
 
-import {spacing, layouts} from '@constants/styles';
-import {px} from '@common/utils';
+import {layouts} from '@constants/styles';
 
 export default StyleSheet.create({
-  container: {
-    marginTop: spacing.xl + px(40),
+  innerContainer: {
+    ...layouts.pb.xxl,
     ...layouts.mx.xl,
-  },
-  progressCircle: {
-    ...layouts.allCentered,
-    ...layouts.my.xl,
-  },
-  cardContainer: {
-    backgroundColor: '#e6e6e4',
-    borderRadius: 20,
-    ...layouts.px.xl,
-    ...layouts.py.xl,
   },
   header: {
     ...layouts.my.xl,
   },
-  dataContainer: {
+  animation: {
+    height: 280,
+  },
+  animationContainer: {
+    ...layouts.my.xxxl,
+  },
+  upcomingSession: {
+    ...layouts.mb.xl,
+    width: 300,
+  },
+  reminder: {
     ...layouts.row,
-    ...layouts.justifyBetween,
   },
-  row: {
-    ...layouts.row,
-  },
-  arrowIcon: {
-    ...layouts.ms.sm,
-  },
-
-  innerContainer: {
-    ...layouts.my.md,
-    ...layouts.ms.xl,
-  },
-  historyButton: {
-    backgroundColor: 'white',
-    ...layouts.px.md,
-    paddingVertical: spacing.sm + px(3),
-    borderRadius: 10,
+  editIcon: {
+    ...layouts.ms.md,
   },
 });

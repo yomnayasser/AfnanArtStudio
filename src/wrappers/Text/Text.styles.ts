@@ -8,7 +8,7 @@ type Styles = {
 
 export default StyleSheet.create<Styles>({
   text: {
-    color: '@text',
+    color: '@darkText',
     fontSize: '@fontNormal',
     fontFamily: fonts.poppins,
     textAlign: 'left',

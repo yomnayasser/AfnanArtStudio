@@ -16,9 +16,9 @@
 		46464585C1094A688CCC0DD4 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4AB2BAC5AC2421B8B5DCCF3 /* Poppins-Regular.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-AfnanArtGallery-AfnanArtGalleryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-AfnanArtGallery-AfnanArtGalleryTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		8A0D7C4DE01A4F1685907794 /* afnan-icons-v02.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12069AA609FA427C9C85FE36 /* afnan-icons-v02.ttf */; };
 		A42FBE6E36C94A3396B583DA /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 139459C6B2154D1382C32A47 /* Poppins-Light.ttf */; };
 		B52C9F5CB0804F8D837A9F00 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5176F4E7950A475F984C1CDA /* Poppins-Medium.ttf */; };
-		C8E86852F8534D9D9843EE81 /* afnan-icons-v01.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C1F56CE3EED4199AE8FE44E /* afnan-icons-v01.ttf */; };
 		FAE22A2131D04E4585389E83 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5725CE063E6A48488AAF7010 /* Poppins-Bold.ttf */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +36,7 @@
 		00E356EE1AD99517003FC87E /* AfnanArtGalleryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AfnanArtGalleryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* AfnanArtGalleryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AfnanArtGalleryTests.m; sourceTree = "<group>"; };
+		12069AA609FA427C9C85FE36 /* afnan-icons-v02.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "afnan-icons-v02.ttf"; path = "../assets/fonts/afnan-icons-v02.ttf"; sourceTree = "<group>"; };
 		139459C6B2154D1382C32A47 /* Poppins-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Light.ttf"; path = "../assets/fonts/Poppins-Light.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* AfnanArtGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AfnanArtGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = AfnanArtGallery/AppDelegate.h; sourceTree = "<group>"; };
@@ -50,7 +51,6 @@
 		5725CE063E6A48488AAF7010 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Bold.ttf"; path = "../assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-AfnanArtGallery-AfnanArtGalleryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AfnanArtGallery-AfnanArtGalleryTests.debug.xcconfig"; path = "Target Support Files/Pods-AfnanArtGallery-AfnanArtGalleryTests/Pods-AfnanArtGallery-AfnanArtGalleryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-AfnanArtGallery.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AfnanArtGallery.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C1F56CE3EED4199AE8FE44E /* afnan-icons-v01.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "afnan-icons-v01.ttf"; path = "../assets/fonts/afnan-icons-v01.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = AfnanArtGallery/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-AfnanArtGallery-AfnanArtGalleryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AfnanArtGallery-AfnanArtGalleryTests.release.xcconfig"; path = "Target Support Files/Pods-AfnanArtGallery-AfnanArtGalleryTests/Pods-AfnanArtGallery-AfnanArtGalleryTests.release.xcconfig"; sourceTree = "<group>"; };
 		AF1DAC7A9435472EB88A46B3 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-SemiBold.ttf"; path = "../assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 				5176F4E7950A475F984C1CDA /* Poppins-Medium.ttf */,
 				E4AB2BAC5AC2421B8B5DCCF3 /* Poppins-Regular.ttf */,
 				AF1DAC7A9435472EB88A46B3 /* Poppins-SemiBold.ttf */,
-				7C1F56CE3EED4199AE8FE44E /* afnan-icons-v01.ttf */,
+				12069AA609FA427C9C85FE36 /* afnan-icons-v02.ttf */,
 			);
 			name = Resources;
 			path = "";
@@ -276,7 +276,7 @@
 				B52C9F5CB0804F8D837A9F00 /* Poppins-Medium.ttf in Resources */,
 				46464585C1094A688CCC0DD4 /* Poppins-Regular.ttf in Resources */,
 				2ADE2457A2F444078E08F39D /* Poppins-SemiBold.ttf in Resources */,
-				C8E86852F8534D9D9843EE81 /* afnan-icons-v01.ttf in Resources */,
+				8A0D7C4DE01A4F1685907794 /* afnan-icons-v02.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

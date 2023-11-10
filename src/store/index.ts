@@ -1,3 +1,3 @@
 export {store} from './redux';
-export {setUserData} from './redux/userReducer';
+export {setUserData, setUpcomingSession} from './redux/userReducer';
 export {StudentCourseContext} from './contexts/StudentCourseContext';

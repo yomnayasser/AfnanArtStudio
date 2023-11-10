@@ -3,7 +3,7 @@ import layouts from '@constants/styles/layouts';
 import {px} from '@common/utils';
 
 export default StyleSheet.create({
-  container: {...layouts.allCentered, ...layouts.my.xxxl},
+  container: {...layouts.allCentered, ...layouts.mt.xxxl, ...layouts.mb.xl},
   inputContainer: {
     ...layouts.my.xl,
   },

@@ -4,8 +4,9 @@ import React from 'react';
 
 import styles from './Login.styles';
 import {LoginForm} from '@forms/index';
-import {Text, View} from '@wrappers/index';
+import {Pressable, Text, View} from '@wrappers/index';
 import {ANIMATION} from '@constants/assets';
+import {SheetManager} from 'react-native-actions-sheet';
 
 const Login = () => {
   return (
@@ -17,6 +18,16 @@ const Login = () => {
         {t('afnan_art_studio')} !
       </Text>
       <LoginForm />
+      <Pressable
+        onPress={async () => {
+          // await SheetManager.show('BookSessionSheet');
+        }}>
+        <Text center>
+          {t('dont_have_account')} ?{' '}
+          <Text color={'@primaryText'}>{t('sign_up')}</Text>
+        </Text>
+      </Pressable>
+
       <LottieView
         autoPlay
         loop

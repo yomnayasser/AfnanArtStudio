@@ -8,15 +8,15 @@ export default StyleSheet.create({
   container: {
     backgroundColor: primaryBg,
     width: '100%',
-    height: 320,
+    height: 300,
     borderRadius: 20,
-    ...layouts.my.xxl,
+    ...layouts.mb.xxxl,
+    ...layouts.mt.xl,
     ...layouts.px.xl,
     ...layouts.shadowProp,
   },
   innerContainer: {
     ...layouts.allCentered,
-    ...layouts.my.md,
   },
   text: {...layouts.mt.lg},
   header: {
@@ -25,8 +25,7 @@ export default StyleSheet.create({
   row: {
     ...layouts.row,
     ...layouts.justifyBetween,
-    ...layouts.mt.mlg,
-    // flexWrap: 'wrap',
+    ...layouts.mt.md,
   },
   pending: {
     ...layouts.py.sm,

@@ -1,20 +1,13 @@
 /* eslint-disable react/no-unstable-nested-components */
 import {t} from 'i18next';
 import * as React from 'react';
-import {ScrollView, View} from 'react-native';
+import {ScrollView} from 'react-native';
 import {TabView, SceneMap, TabBar} from 'react-native-tab-view';
 
-import {Text} from '@wrappers/index';
+import {Text, View} from '@wrappers/index';
 import styles from './CourseDetailsTabView.styles';
 import {courseDetailsTypes, feedbackTypes} from '@common/types';
-import {
-  Button,
-  FeedbackCard,
-  Header,
-  List,
-  Separator,
-  Table,
-} from '@components/index';
+import {FeedbackCard, Header, List, Separator, Table} from '@components/index';
 
 type Props = {
   course: courseDetailsTypes;
@@ -44,6 +37,7 @@ const FirstRoute = ({course}: Props) => (
         <List listData={course?.notes} />
       </>
     )}
+    <View style={styles.block} />
   </ScrollView>
 );
 

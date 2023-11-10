@@ -4,13 +4,13 @@ import {useNavigation} from '@react-navigation/native';
 
 import {CoursesFaker} from '@fakers/index';
 import styles from './AvailableCourses.styles';
-import {VerticalCoursesList, ScreenHeader} from '@components/index';
+import {VerticalCoursesList, InnerHeader} from '@components/index';
 
 const AvailableCourses = () => {
   const navigation = useNavigation();
   return (
     <ScrollView>
-      <ScreenHeader
+      <InnerHeader
         header={'Available Courses'}
         onPress={() => {
           navigation.goBack();

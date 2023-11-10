@@ -100,3 +100,9 @@ export interface enrolledCourses {
   endDate: string;
   enrollmentPeriod: number;
 }
+
+export interface reservedCourse {
+  courseName: string;
+  upcomingSessionDay: string;
+  upcomingSessionTime: string;
+}

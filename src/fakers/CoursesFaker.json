@@ -32,6 +32,24 @@
         "starsRate": 5,
         "date": "9/11/2022"
       }
+    ],
+    "courseTiming": [
+      {
+        "day": "Saturday",
+        "hours": ["12 PM - 3 PM", "6 PM - 9 PM"]
+      },
+      {
+        "day": "Sunday",
+        "hours": ["11 PM - 2 PM", "6 PM - 9 PM"]
+      },
+      {
+        "day": "Tuesday",
+        "hours": ["11 PM - 2 PM", "6 PM - 9 PM"]
+      },
+      {
+        "day": "Wednesday",
+        "hours": ["6 PM - 9 PM"]
+      }
     ]
   },
   {
@@ -156,7 +174,7 @@
     "packagesPrices": [["2000"]],
     "notes": ["Materials are included"],
     "sessionDuration": 3,
-    "disabled": true,
+    "disabled": false,
     "sliderImages": ["resin1", "resin2", "resin3", "resin4"],
     "feedbacks": [
       {
@@ -193,7 +211,7 @@
     "packagesPrices": [["1500"]],
     "notes": ["Materials included", "No Experience Needed"],
     "sessionDuration": 3,
-    "disabled": true,
+    "disabled": false,
     "sliderImages": ["mosaic1", "mosaic2", "mosaic3"],
     "feedbacks": [
       {

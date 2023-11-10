@@ -8,7 +8,9 @@ export default StyleSheet.create({
     ...layouts.row,
     ...layouts.justifyBetween,
     ...layouts.px.xxxl,
-    ...layouts.py.xxl,
+    ...layouts.pb.xxl,
+    ...layouts.py.xl,
+    ...layouts.yCentered,
     ...layouts.shadowProp2,
   },
   icon: {
@@ -16,6 +18,6 @@ export default StyleSheet.create({
     ...layouts.my.sm,
   },
   bottomTabText: {
-    ...layouts.pb.md,
+    ...layouts.pb.sm,
   },
 });

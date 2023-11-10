@@ -1,83 +1,74 @@
-import {Pressable, Text, View} from '@wrappers/index';
-import React, {useState} from 'react';
-import styles from './StudentDashboard.styles';
-import {
-  Button,
-  DashboardCard,
-  Icon,
-  ProgressCircle,
-  ScreenHeader,
-} from '@components/index';
-import {useSelector} from 'react-redux';
-import {RootState} from '@store/redux';
 import {t} from 'i18next';
+import React, {useState} from 'react';
+import {ScrollView} from 'react-native';
+import {useSelector} from 'react-redux';
+import AnimatedLottieView from 'lottie-react-native';
 import {useNavigation} from '@react-navigation/native';
-type Props = {};
 
-const StudentDashboard = (props: Props) => {
-  const navigation = useNavigation();
-  const [showSessions, setShowSessions] = useState(false);
-  const [showFees, setShowFees] = useState(false);
-  const [showDates, setShowDates] = useState(false);
+import {
+  CourseDashboardCard,
+  Filter,
+  Header,
+  HorizontalCoursesList,
+  SessionReminder,
+} from '@components/index';
+import {RootState} from '@store/redux';
+import {ANIMATION} from '@constants/assets';
+import styles from './StudentDashboard.styles';
+import {ScreenHeader} from '@components/index';
+import {Pressable, Text, View} from '@wrappers/index';
+import {AvailableCoursesScreen} from '@navigation/navigationTypes';
+
+const StudentDashboard = () => {
+  const navigation = useNavigation<AvailableCoursesScreen>();
+
   const user = useSelector((state: RootState) => state.userReducer.user);
-  const course = user?.enrolledCourses[0];
-  const finishedSessions = course?.enrollmentPeriod - course?.sessionsLeft;
+  const enrolledCourses = user?.enrolledCourses;
+  const [expandSession, setExpand] = useState(
+    enrolledCourses?.length > 1 ? false : true,
+  );
   return (
-    <View style={styles.container}>
-      <Text largeSize style={styles.header}>
-        {t('your_enrolled_course')}
-      </Text>
-      <View style={styles.cardContainer}>
-        <Text xMediumSize medium>
-          {course?.name} {t('course')}
-        </Text>
-        <ProgressCircle
-          size={60}
-          value={finishedSessions}
-          total={course?.enrollmentPeriod}
-          title={t('sessions')}
-          style={styles.progressCircle}
-        />
+    <>
+      <ScreenHeader headerText={t('your_enrolled_courses')} />
+      <ScrollView
+        style={styles.innerContainer}
+        showsVerticalScrollIndicator={false}>
+        <Filter />
+        <SessionReminder />
 
-        <Text medium color={'@primaryText'}>
-          {t('sessions')}{' '}
-        </Text>
-
-        <View style={styles.innerContainer}>
-          <Text mediumSize>
-            {t('total_sessions')} : {course?.enrollmentPeriod}
-          </Text>
-          <Text mediumSize>
-            {t('sessions_taken')} : {finishedSessions}
-          </Text>
-          <Text mediumSize>
-            {t('sessions_left')} : {course?.sessionsLeft}
-          </Text>
-        </View>
-
-        <Text medium color={'@primaryText'}>
-          important Dates
-        </Text>
-
-        <View style={styles.innerContainer}>
-          <Text mediumSize>
-            {t('startDate')} : {course?.startDate}
-          </Text>
-          <Text mediumSize>
-            {t('expire_date')} : {course?.endDate}
-          </Text>
-        </View>
-        <Text medium color={'@primaryText'}>
-          {t('fees')}
-        </Text>
-
-        <View style={styles.innerContainer}>
-          <Text mediumSize>
-            {t('pending_fees')} : {course?.pendingFees} {t('egp')}
-          </Text>
-        </View>
-      </View>
-    </View>
+        {enrolledCourses.length > 0 ? (
+          enrolledCourses?.map(course => {
+            return (
+              <CourseDashboardCard
+                expandSession={expandSession}
+                setExpand={setExpand}
+                course={course}
+              />
+            );
+          })
+        ) : (
+          <View style={styles.animationContainer}>
+            <AnimatedLottieView
+              autoPlay
+              loop
+              source={ANIMATION.login4}
+              style={styles.animation}
+            />
+            <Text center>{t('no_enrolled_courses')}</Text>
+            <Pressable
+              onPress={() => {
+                navigation.navigate('AvailableCourses');
+              }}>
+              <Text center color={'@primaryText'}>
+                {t('check_courses')}
+              </Text>
+            </Pressable>
+          </View>
+        )}
+        <Header headerText={t('suggested_courses')} style={styles.header} />
+        <HorizontalCoursesList fullList={false} />
+      </ScrollView>
+    </>
   );
 };
 

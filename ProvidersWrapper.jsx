@@ -3,15 +3,15 @@ import React from 'react';
 import {store} from '@store/redux';
 import {Provider} from 'react-redux';
 import {NavigationContainer} from '@react-navigation/native';
-import {BottomSheetModalProvider} from '@gorhom/bottom-sheet';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import {SheetProvider} from 'react-native-actions-sheet';
 
 export default function ProvidersWrapper({children}) {
   return (
     <GestureHandlerRootView style={{flex: 1}}>
       <Provider store={store}>
         <NavigationContainer>
-          <BottomSheetModalProvider>{children}</BottomSheetModalProvider>
+          <SheetProvider>{children}</SheetProvider>
         </NavigationContainer>
       </Provider>
     </GestureHandlerRootView>

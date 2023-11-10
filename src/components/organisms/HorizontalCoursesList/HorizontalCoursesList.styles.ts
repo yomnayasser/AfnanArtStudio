@@ -9,8 +9,8 @@ export default StyleSheet.create({
     ...layouts.shadowProp,
   },
   innerContainer: {
-    ...layouts.mx.lg,
-    ...layouts.my.sm,
+    ...layouts.mx.mlg,
+    ...layouts.my.md,
   },
   imageContainer: {
     ...layouts.border,
@@ -20,8 +20,8 @@ export default StyleSheet.create({
     ...layouts.mx.md,
   },
   image: {
-    width: 80,
-    height: 80,
+    width: 75,
+    height: 75,
   },
   text: {
     ...layouts.mt.md,
