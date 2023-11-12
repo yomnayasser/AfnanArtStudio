@@ -34,6 +34,21 @@ export const IMAGES: images = {
   sketching2: require('./Images/sketching2.jpeg'),
   sketching3: require('./Images/sketching3.jpeg'),
   sketching4: require('./Images/sketching4.jpeg'),
+  carousel1: require('./Images/carousel1.jpeg'),
+  carousel2: require('./Images/carousel2.jpeg'),
+  carousel3: require('./Images/carousel3.jpeg'),
+  carousel4: require('./Images/carousel4.jpeg'),
+  carousel5: require('./Images/carousel5.jpeg'),
+  carousel6: require('./Images/carousel6.jpeg'),
+  carousel7: require('./Images/carousel7.jpeg'),
+  carousel8: require('./Images/carousel8.jpeg'),
+  carousel9: require('./Images/carousel9.jpeg'),
+  carousel10: require('./Images/carousel10.jpeg'),
+  carousel11: require('./Images/carousel11.jpeg'),
+  carousel12: require('./Images/carousel12.jpeg'),
+  carousel13: require('./Images/carousel13.jpeg'),
+  carousel15: require('./Images/carousel15.jpeg'),
+  carousel16: require('./Images/carousel16.jpeg'),
 };
 
 export const ANIMATION = {

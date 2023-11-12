@@ -22,7 +22,7 @@ const HorizontalCoursesList = ({fullList = true}: Props) => {
         const imagePath = course.image;
         return (
           <>
-            {(fullList ? index < 6 : index < 3) && (
+            {(fullList ? index < 8 : index < 3) && (
               <TouchableOpacity
                 style={styles.innerContainer}
                 onPress={() => {

@@ -1,14 +1,15 @@
 import React from 'react';
 import {t} from 'i18next';
 import {ScrollView} from 'react-native';
+import {useSelector} from 'react-redux';
 import {useNavigation} from '@react-navigation/native';
 
 import styles from './Home.styles';
-import {HorizontalCoursesList, Header, DashboardCard} from '@components/index';
-import {AvailableCoursesScreen} from '@navigation/navigationTypes';
-import {Text} from '@wrappers/index';
 import {RootState} from '@store/redux';
-import {useSelector} from 'react-redux';
+import {Text, View} from '@wrappers/index';
+import {ExhibitionFaker} from '@fakers/index';
+import {AvailableCoursesScreen} from '@navigation/navigationTypes';
+import {HorizontalCoursesList, Header, ImageCarousel} from '@components/index';
 
 const Home = () => {
   const navigation = useNavigation<AvailableCoursesScreen>();
@@ -16,6 +17,7 @@ const Home = () => {
   const headerOnPress = () => {
     navigation.navigate('AvailableCourses');
   };
+
   return (
     <ScrollView
       style={styles.container}
@@ -34,7 +36,22 @@ const Home = () => {
         style={styles.header}
       />
       <HorizontalCoursesList />
-      <DashboardCard enrolledCourses={user?.enrolledCourses} />
+      <View style={styles.aboutContainer}>
+        <Text largeSize medium style={styles.aboutHeader}>
+          {t('latest_exhibition')}
+        </Text>
+        <ImageCarousel data={ExhibitionFaker} />
+        <Text xMediumSize medium style={styles.aboutTitle}>
+          {t('about_the_exhibition')} :
+        </Text>
+        <Text>
+          {t('about_the_exhibition1')}{' '}
+          <Text color={'@primaryText'}>{t('exhibition_name')}</Text>{' '}
+          {t('about_the_exhibition2')}
+        </Text>
+        <Text style={styles.aboutTitle}>{t('about_the_exhibition3')}</Text>
+        <Text>{t('about_the_exhibition4')}</Text>
+      </View>
     </ScrollView>
   );
 };

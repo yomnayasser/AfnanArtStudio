@@ -14,4 +14,14 @@ export default StyleSheet.create({
   text: {
     ...layouts.mt.xl,
   },
+  aboutContainer: {
+    ...layouts.mt.xl,
+    ...layouts.mb.xxl,
+  },
+  aboutHeader: {
+    ...layouts.my.xl,
+  },
+  aboutTitle: {
+    ...layouts.my.xxl,
+  },
 });

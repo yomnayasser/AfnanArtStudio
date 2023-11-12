@@ -106,3 +106,9 @@ export interface reservedCourse {
   upcomingSessionDay: string;
   upcomingSessionTime: string;
 }
+
+export interface imageCarousel {
+  id: number;
+  title: string;
+  image: string;
+}
