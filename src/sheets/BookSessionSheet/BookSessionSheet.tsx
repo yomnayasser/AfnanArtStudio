@@ -1,18 +1,19 @@
 import {t} from 'i18next';
-import React, {useState} from 'react';
 import {ScrollView} from 'react-native';
-import {useDispatch} from 'react-redux';
+import React, {useState} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
 import {getCurrentTheme} from 'react-native-theming';
 import ActionSheet, {
   SheetManager,
   SheetProps,
 } from 'react-native-actions-sheet';
 
+import {RootState} from '@store/redux';
 import {CoursesFaker} from '@fakers/index';
 import styles from './BookSessionSheet.styles';
-import {setUpcomingSession} from '@store/index';
 import {Pressable, Text, View} from '@wrappers/index';
 import {Button, Icon, RadioButton} from '@components/index';
+import {setUpcomingSession, updateUpcomingSession} from '@store/index';
 
 interface Props extends SheetProps {
   payload: {courseName: string};
@@ -22,10 +23,18 @@ const BookSessionSheet = ({payload, sheetId}: Props) => {
   const theme = getCurrentTheme().def;
   const dispatch = useDispatch();
 
-  const [selectedId, setSelectedId] = useState<string>('');
-  const courseTiming = CoursesFaker.find(
+  const user = useSelector((state: RootState) => state.userReducer.user);
+  const reservedCourse = user.reservedCourse.filter(
+    course => course.courseName === payload?.courseName,
+  );
+  const courseData = CoursesFaker.find(
     course => payload?.courseName === course.name,
-  )?.courseTiming;
+  );
+  const [selectedId, setSelectedId] = useState<string>(
+    reservedCourse?.length !== 0
+      ? `${reservedCourse[0]?.upcomingSessionDay} ${reservedCourse[0]?.upcomingSessionStartTime} PM - ${reservedCourse[0]?.upcomingSessionEndTime} PM`
+      : '',
+  );
 
   const closeSheet = async () => {
     await SheetManager.hide('BookSessionSheet');
@@ -44,7 +53,7 @@ const BookSessionSheet = ({payload, sheetId}: Props) => {
           {t('course')}
         </Text>
         <View style={styles.contentContainer}>
-          {courseTiming?.map(courseTime => {
+          {courseData?.courseTiming?.map(courseTime => {
             return (
               <>
                 <Text style={styles.text}>{courseTime?.day}</Text>
@@ -75,12 +84,19 @@ const BookSessionSheet = ({payload, sheetId}: Props) => {
             title={t('book')}
             style={styles.button}
             onPress={() => {
-              dispatch(
-                setUpcomingSession({
-                  reservedSessionTime: selectedId,
-                  reservedCourseName: payload?.courseName,
-                }),
-              );
+              reservedCourse.length !== 0
+                ? dispatch(
+                    updateUpcomingSession({
+                      reservedCourseName: payload?.courseName,
+                      reservedSessionTime: selectedId,
+                    }),
+                  )
+                : dispatch(
+                    setUpcomingSession({
+                      reservedSessionTime: selectedId,
+                      reservedCourseName: payload?.courseName,
+                    }),
+                  );
               closeSheet();
             }}
           />

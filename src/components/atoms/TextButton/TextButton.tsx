@@ -4,9 +4,8 @@ import {ViewStyle} from 'react-native';
 import Icon from '../Icon/Icon';
 import styles from './TextButton.styles';
 import {Text, View} from '@wrappers/index';
-import {StudentsDashboardScreen} from '@navigation/navigationTypes';
-import {useNavigation} from '@react-navigation/native';
 import {courseDetailsTypes} from '@common/types';
+
 type Props = {
   text: string;
   style?: ViewStyle | undefined;

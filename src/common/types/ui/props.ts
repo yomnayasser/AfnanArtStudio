@@ -105,7 +105,8 @@ export interface enrolledCourses {
 export interface reservedCourse {
   courseName: string;
   upcomingSessionDay: string;
-  upcomingSessionTime: string;
+  upcomingSessionStartTime: string;
+  upcomingSessionEndTime: string;
 }
 
 export interface imageCarousel {

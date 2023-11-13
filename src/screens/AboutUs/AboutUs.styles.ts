@@ -16,9 +16,9 @@ export default StyleSheet.create({
   socials: {
     ...layouts.row,
     ...layouts.mb.xxxl,
-    ...layouts.allCentered,
+    // ...layouts.allCentered,
   },
   svg: {
-    ...layouts.mx.xxl,
+    ...layouts.mx.xl,
   },
 });

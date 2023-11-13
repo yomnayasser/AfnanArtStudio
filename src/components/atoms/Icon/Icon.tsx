@@ -4,7 +4,7 @@ import {createThemedComponent} from 'react-native-theming';
 import {px} from '@common/utils';
 import RNCustomIcon from './CustomIcon';
 import {ThemedTextStyle, ThemedViewStyle} from '@common/types';
-import {ImageStyle} from 'react-native';
+import {ImageStyle, ViewStyle} from 'react-native';
 
 const ThemedCustomIcon = createThemedComponent(RNCustomIcon, ['color']);
 
@@ -12,7 +12,11 @@ type Props = {
   name: string;
   color?: string;
   size?: number;
-  style?: ThemedViewStyle | (ImageStyle | ThemedTextStyle)[] | {color: string};
+  style?:
+    | ThemedViewStyle
+    | (ImageStyle | ThemedTextStyle)[]
+    | {color: string}
+    | ViewStyle;
 };
 
 const Icon = ({name, color, size, style}: Props) => {

@@ -25,6 +25,7 @@ export const IMAGES: images = {
   Mosaic: require('./Images/Mosaic.jpeg'),
   Logo: require('./Images/AfnanLogo.jpg'),
   Acrylic: require('./Images/acrylic.jpg'),
+  warning: require('./Images/warning.png'),
   Macrame: require('./Images/macrame.jpeg'),
   mosaic1: require('./Images/mosaic1.jpeg'),
   mosaic2: require('./Images/mosaic2.jpeg'),

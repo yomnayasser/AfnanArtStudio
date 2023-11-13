@@ -25,34 +25,44 @@ const SessionReminder = () => {
                   color={'@errorText'}
                   style={styles.upcomingSession}>
                   {t('upcoming_session')} {t('in')} {session.courseName}{' '}
-                  {t('course')} on {''}
+                  {t('course')} {t('on')} {''}
                   {session.upcomingSessionDay}{' '}
-                  {getNextDayDate(session.upcomingSessionDay)} {t('at')}{' '}
-                  {session.upcomingSessionTime} {t('pm')}
+                  {getNextDayDate(session.upcomingSessionDay)} {t('from')}{' '}
+                  {session.upcomingSessionStartTime} {t('pm')} {t('to')}{' '}
+                  {session.upcomingSessionEndTime} {t('pm')}
                 </Text>
-                <Pressable
-                  onPress={async () => {
-                    SheetManager.show('BookSessionSheet', {
-                      payload: {
-                        courseName: session.courseName,
-                      },
-                    });
-                  }}>
-                  <View style={styles.row}>
+                <View style={styles.row}>
+                  <Pressable
+                    onPress={async () => {
+                      SheetManager.show('BookSessionSheet', {
+                        payload: {
+                          courseName: session.courseName,
+                        },
+                      });
+                    }}>
                     <Icon
                       name="edit-2"
                       size={17}
                       style={styles.editIcon}
                       color="@errorText"
                     />
+                  </Pressable>
+                  <Pressable
+                    onPress={() => {
+                      SheetManager.show('DeleteSessionSheet', {
+                        payload: {
+                          courseName: session.courseName,
+                        },
+                      });
+                    }}>
                     <Icon
                       name="close"
                       size={17}
                       style={styles.editIcon}
                       color="@errorText"
                     />
-                  </View>
-                </Pressable>
+                  </Pressable>
+                </View>
               </View>
             </>
           );
