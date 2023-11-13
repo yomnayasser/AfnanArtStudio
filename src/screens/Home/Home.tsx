@@ -36,13 +36,20 @@ const Home = () => {
         style={styles.header}
       />
       <HorizontalCoursesList />
+
+      <Header
+        headerText={'Find More About Us'}
+        iconName="arrow-right-3"
+        onPressHeader={() => {
+          navigation.navigate('AboutUs');
+        }}
+        style={styles.header}
+      />
+
       <View style={styles.aboutContainer}>
-        <Text largeSize medium style={styles.aboutHeader}>
-          {t('latest_exhibition')}
-        </Text>
         <ImageCarousel data={ExhibitionFaker} />
-        <Text xMediumSize medium style={styles.aboutTitle}>
-          {t('about_the_exhibition')} :
+        <Text xxMediumSize medium style={styles.aboutTitle}>
+          {t('latest_exhibition')} :
         </Text>
         <Text>
           {t('about_the_exhibition1')}{' '}

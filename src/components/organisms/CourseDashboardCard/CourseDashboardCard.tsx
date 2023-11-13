@@ -42,7 +42,7 @@ const CourseDashboardCard = ({expandSession, course, setExpand}: Props) => {
             </Text>
           </Pressable>
         )}
-        {course?.enrolledCourses?.length > 1 && (
+        {course?.enrolledCourses?.length > 1 && course?.status !== 1 && (
           <Pressable
             onPress={() => {
               setExpand(!expandSession);

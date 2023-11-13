@@ -7,4 +7,5 @@ export {default as DashboardCard} from './DashboardCard/DashboardCard';
 export {default as VerticalCoursesList} from './VerticalCoursesList/VerticalCoursesList';
 export {default as CourseDashboardCard} from './CourseDashboardCard/CourseDashboardCard';
 export {default as CourseDetailsTabView} from './CourseDetailsTabView/CourseDetailsTabView';
+export {default as HorizontalImageSlider} from './HorizontalImageSlider/HorizontalImageSlider';
 export {default as HorizontalCoursesList} from './HorizontalCoursesList/HorizontalCoursesList';

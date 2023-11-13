@@ -7,9 +7,9 @@ export default StyleSheet.create({
   container: {
     ...layouts.my.xl,
     borderWidth: 1,
-    ...layouts.py.lg,
-    ...layouts.px.md,
-    borderRadius: 15,
+    ...layouts.py.xl,
+    ...layouts.px.xl,
+    // borderRadius: 15,
     backgroundColor: '@cardBg',
     borderColor: '@cardBg',
     ...layouts.shadowProp,
@@ -30,6 +30,7 @@ export default StyleSheet.create({
   image: {
     width: 100,
     height: 100,
+    ...layouts.me.md,
   },
   imageDisabled: {
     opacity: 0.2,

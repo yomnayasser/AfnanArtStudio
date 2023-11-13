@@ -1,3 +1,6 @@
+export {default as Facebook} from './Svgs/Facebook';
+export {default as Instagram} from './Svgs/Instagram';
+
 type images = {
   [key: string]: string;
 };
@@ -34,6 +37,10 @@ export const IMAGES: images = {
   sketching2: require('./Images/sketching2.jpeg'),
   sketching3: require('./Images/sketching3.jpeg'),
   sketching4: require('./Images/sketching4.jpeg'),
+  instructors1: require('./Images/Instructors1.png'),
+  instructors2: require('./Images/Instructors2.png'),
+  instructors3: require('./Images/Instructors3.png'),
+  instructors4: require('./Images/Instructors4.png'),
   carousel1: require('./Images/carousel1.jpeg'),
   carousel2: require('./Images/carousel2.jpeg'),
   carousel3: require('./Images/carousel3.jpeg'),

@@ -7,6 +7,7 @@ import {
   LandingPage,
   AvailableCourses,
   StudentsCourse,
+  AboutUs,
 } from '@screens/index';
 import BottomTabNavigator from './BottomTabNavigator';
 
@@ -25,6 +26,7 @@ const Main = () => {
       <MainStack.Screen name="Login" component={Login} />
       <MainStack.Screen name="AvailableCourses" component={AvailableCourses} />
       <MainStack.Screen name="StudentsCourse" component={StudentsCourse} />
+      <MainStack.Screen name="AboutUs" component={AboutUs} />
     </MainStack.Navigator>
   );
 };

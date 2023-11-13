@@ -11,6 +11,7 @@ export default StyleSheet.create({
   contentContainer: {
     ...layouts.mx.xxl,
     ...layouts.my.xl,
+    alignItems: 'flex-start',
   },
   edit: {
     ...layouts.row,

@@ -4,24 +4,27 @@ import {useNavigation} from '@react-navigation/native';
 
 import {CoursesFaker} from '@fakers/index';
 import styles from './AvailableCourses.styles';
-import {VerticalCoursesList, InnerHeader} from '@components/index';
+import {VerticalCoursesList, InnerHeader, Filter} from '@components/index';
 
 const AvailableCourses = () => {
   const navigation = useNavigation();
   return (
-    <ScrollView>
+    <>
       <InnerHeader
         header={'Available Courses'}
         onPress={() => {
           navigation.goBack();
         }}
       />
-      <View style={styles.container}>
-        {CoursesFaker.map(course => {
-          return <VerticalCoursesList course={course} />;
-        })}
-      </View>
-    </ScrollView>
+      <ScrollView>
+        <View style={styles.container}>
+          <Filter />
+          {CoursesFaker.map(course => {
+            return <VerticalCoursesList course={course} />;
+          })}
+        </View>
+      </ScrollView>
+    </>
   );
 };
 

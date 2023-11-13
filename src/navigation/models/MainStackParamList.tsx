@@ -8,6 +8,7 @@ type MainStackParamList = {
   };
   AvailableCourses: undefined;
   BottomTabNavigator: undefined;
+  AboutUs: undefined;
 };
 
 export default MainStackParamList;

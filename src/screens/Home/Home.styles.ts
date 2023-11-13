@@ -9,14 +9,19 @@ export default StyleSheet.create({
     ...layouts.mx.xl,
   },
   header: {
-    ...layouts.my.xl,
+    ...layouts.my.xxl,
   },
   text: {
     ...layouts.mt.xl,
   },
   aboutContainer: {
-    ...layouts.mt.xl,
+    ...layouts.mt.sm,
     ...layouts.mb.xxl,
+    backgroundColor: 'white',
+    ...layouts.px.xl,
+    ...layouts.pb.xl,
+    ...layouts.pt.md,
+    borderRadius: 10,
   },
   aboutHeader: {
     ...layouts.my.xl,

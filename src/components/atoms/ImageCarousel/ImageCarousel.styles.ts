@@ -4,13 +4,8 @@ import {layouts} from '@constants/styles';
 
 export default StyleSheet.create({
   container: {
-    backgroundColor: 'white',
-    borderWidth: 1,
-    borderColor: 'white',
     ...layouts.allCentered,
     ...layouts.pt.sm,
-    borderBottomRightRadius: 5,
-    borderBottomLeftRadius: 5,
   },
   innerContainer: {
     backgroundColor: 'white',

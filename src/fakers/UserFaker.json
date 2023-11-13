@@ -13,7 +13,8 @@
         "cashBack": 0,
         "startDate": "8/10/2023",
         "endDate": "8/12/2023",
-        "enrollmentPeriod": 14
+        "enrollmentPeriod": 14,
+        "status": 1
       }
     ],
     "reservedCourse": []

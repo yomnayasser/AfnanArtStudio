@@ -1,8 +1,9 @@
+import {Facebook, Instagram} from '@constants/assets';
 import React from 'react';
 import {ViewStyle} from 'react-native';
 
 export type Props = {
-  source: 'Logo';
+  source: string;
   width?: number;
   height?: number;
   color?: string;
@@ -16,7 +17,10 @@ type svgType = {
 };
 
 const Svg = (props: Props) => {
-  const SvgNames: svgType = {};
+  const SvgNames: svgType = {
+    facebook: <Facebook props={props} />,
+    instagram: <Instagram props={props} />,
+  };
 
   return SvgNames[props.source];
 };

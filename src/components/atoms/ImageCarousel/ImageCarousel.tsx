@@ -45,8 +45,8 @@ const ImageCarousel = ({data, style}: Props) => {
             </View>
           </View>
         )}
-        sliderWidth={350}
-        itemWidth={350}
+        sliderWidth={340}
+        itemWidth={340}
       />
     </View>
   );

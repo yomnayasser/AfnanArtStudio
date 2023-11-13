@@ -1,4 +1,4 @@
-import {Text, TouchableOpacity, View} from '@wrappers/index';
+import {Pressable, Text, View} from '@wrappers/index';
 import React from 'react';
 import styles from './Header.styles';
 import Icon from '../Icon/Icon';
@@ -10,18 +10,23 @@ type Props = {
   onPressHeader?: (event: GestureResponderEvent) => void;
   style?: ViewStyle;
   badge?: number;
+  iconPosition?: 'Left' | 'Right';
 };
 
-const Header = ({headerText, iconName, onPressHeader, style, badge}: Props) => {
+const Header = ({
+  headerText,
+  iconName,
+  onPressHeader,
+  style,
+  badge,
+  iconPosition = 'Right',
+}: Props) => {
   return (
     <View style={style ? style : null}>
       {onPressHeader ? (
         <View style={styles.row}>
-          <TouchableOpacity style={styles.container} onPress={onPressHeader}>
-            <Text color={'@primaryButtonBG'} xMediumSize medium>
-              {headerText}
-            </Text>
-            {iconName && (
+          <Pressable style={styles.container} onPress={onPressHeader}>
+            {iconName && iconPosition === 'Left' && (
               <Icon
                 name={iconName}
                 color="@primaryButtonBG"
@@ -29,7 +34,18 @@ const Header = ({headerText, iconName, onPressHeader, style, badge}: Props) => {
                 style={styles.icon}
               />
             )}
-          </TouchableOpacity>
+            <Text color={'@primaryButtonBG'} xMediumSize medium>
+              {headerText}
+            </Text>
+            {iconName && iconPosition === 'Right' && (
+              <Icon
+                name={iconName}
+                color="@primaryButtonBG"
+                size={19}
+                style={styles.icon}
+              />
+            )}
+          </Pressable>
           {badge && badge > 1 && (
             <View style={styles.badge}>
               <Text center style={styles.badgeText}>

@@ -25,7 +25,7 @@ const SessionReminder = () => {
                   color={'@errorText'}
                   style={styles.upcomingSession}>
                   {t('upcoming_session')} {t('in')} {session.courseName}{' '}
-                  {t('course')} {''}
+                  {t('course')} on {''}
                   {session.upcomingSessionDay}{' '}
                   {getNextDayDate(session.upcomingSessionDay)} {t('at')}{' '}
                   {session.upcomingSessionTime} {t('pm')}

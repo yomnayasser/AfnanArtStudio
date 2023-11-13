@@ -99,6 +99,7 @@ export interface enrolledCourses {
   startDate: string;
   endDate: string;
   enrollmentPeriod: number;
+  status: number;
 }
 
 export interface reservedCourse {
@@ -111,4 +112,9 @@ export interface imageCarousel {
   id: number;
   title: string;
   image: string;
+}
+
+export interface HorizontalImageSliderTypes {
+  image: string;
+  name: string;
 }

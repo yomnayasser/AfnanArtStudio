@@ -13,8 +13,8 @@ type Props = {
 const InnerHeader = ({onPress, header}: Props) => {
   return (
     <Pressable style={styles.container} onPress={onPress}>
-      <Icon name="arrow-left" style={styles.icon} size={30} />
-      <Text largeSize style={styles.text} color={'@darkText'}>
+      <Icon name="arrow-left" style={styles.icon} size={25} />
+      <Text xxMediumSize style={styles.text} color={'@darkText'}>
         {header}
       </Text>
     </Pressable>

@@ -1,5 +1,6 @@
 export {default as Home} from './Home/Home';
 export {default as Login} from './Login/Login';
+export {default as AboutUs} from './AboutUs/AboutUs';
 export {default as LandingPage} from './LandingPage/LandingPage';
 export {default as StudentProfile} from './StudentProfile/StudentProfile';
 export {default as StudentsCourse} from './StudentsCourse/StudentsCourse';
