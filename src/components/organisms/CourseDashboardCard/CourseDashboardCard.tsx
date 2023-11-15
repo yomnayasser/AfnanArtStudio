@@ -1,48 +1,64 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {t} from 'i18next';
-import {SheetManager} from 'react-native-actions-sheet';
+import {useSelector} from 'react-redux';
+import {getCurrentTheme} from 'react-native-theming';
 
+import {RootState} from '@store/redux';
 import styles from './CourseDashboardCard.styles';
 import {Pressable, Text, View} from '@wrappers/index';
-import {Button, Icon, ProgressCircle} from '@components/index';
-import {useSelector} from 'react-redux';
-import {RootState} from '@store/redux';
+import {enrolledCoursesTypes} from '@common/types';
+import {getOpacity, showBookSheet} from './CourseDashboardCardUtils';
+import {Button, Icon, ProgressCircle, SessionReminder} from '@components/index';
 
 type Props = {
-  expandSession: boolean;
-  setExpand: Function;
-  course: any;
+  course: enrolledCoursesTypes;
 };
 
-const CourseDashboardCard = ({expandSession, course, setExpand}: Props) => {
-  const finishedSessions = course?.enrollmentPeriod - course?.sessionsLeft;
+const CourseDashboardCard = ({course}: Props) => {
+  const [expandSession, setExpand] = useState(
+    course.status === 1 ? true : false,
+  );
   const user = useSelector((state: RootState) => state.userReducer.user);
 
-  const showBookSheet = () => {
-    SheetManager.show('BookSessionSheet', {
-      payload: {
-        courseName: course.name,
-      },
-    });
-  };
+  const enrolledCourses = user?.enrolledCourses;
+  const reservedCourse = user?.reservedCourse;
+  const theme = getCurrentTheme().def;
+  const {errorText} = theme;
+
+  const activeCourse = course.status === 1;
+  const expiredCourse = course.status === -1;
+  const isBookedBefore = reservedCourse.find(
+    reserved => reserved.courseId === course.id,
+  );
+  const finishedSessions = course?.enrollmentPeriod - course?.sessionsLeft;
 
   return (
-    <View style={styles.cardContainer}>
+    <View style={[styles.cardContainer, getOpacity(activeCourse)]}>
       <View style={styles.dataContainer}>
         <Text xMediumSize medium>
           {course?.name} {t('course')}
         </Text>
-        {!expandSession && (
+        {!expandSession && !isBookedBefore && activeCourse ? (
           <Pressable
             onPress={() => {
-              showBookSheet();
+              showBookSheet(course);
             }}>
             <Text medium color={'@primaryText'}>
               {t('book_session')}
             </Text>
           </Pressable>
+        ) : (
+          <>
+            <Text medium color={expiredCourse ? '@errorText' : '@primaryText'}>
+              {course.status === 0
+                ? t('completed')
+                : expiredCourse
+                ? t('expired')
+                : ''}
+            </Text>
+          </>
         )}
-        {course?.enrolledCourses?.length > 1 && course?.status !== 1 && (
+        {enrolledCourses?.length > 1 && (
           <Pressable
             onPress={() => {
               setExpand(!expandSession);
@@ -57,6 +73,7 @@ const CourseDashboardCard = ({expandSession, course, setExpand}: Props) => {
         total={course?.enrollmentPeriod}
         title={t('sessions')}
         style={styles.progressCircle}
+        color={expiredCourse ? errorText : ''}
       />
       {expandSession && (
         <>
@@ -97,18 +114,19 @@ const CourseDashboardCard = ({expandSession, course, setExpand}: Props) => {
               {t('pending_fees')} : {course?.pendingFees} {t('egp')}
             </Text>
           </View>
-          {user.reservedCourse.length === 0 && (
+          {!isBookedBefore && activeCourse && (
             <Button
               title={t('book_session')}
               light
               onPress={() => {
-                showBookSheet();
+                showBookSheet(course);
               }}
               style={styles.button}
             />
           )}
         </>
       )}
+      {isBookedBefore && <SessionReminder />}
     </View>
   );
 };

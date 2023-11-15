@@ -16,7 +16,7 @@ import {Button, Icon, RadioButton} from '@components/index';
 import {setUpcomingSession, updateUpcomingSession} from '@store/index';
 
 interface Props extends SheetProps {
-  payload: {courseName: string};
+  payload: {courseName: string; courseId: number};
 }
 
 const BookSessionSheet = ({payload, sheetId}: Props) => {
@@ -39,6 +39,7 @@ const BookSessionSheet = ({payload, sheetId}: Props) => {
   const closeSheet = async () => {
     await SheetManager.hide('BookSessionSheet');
   };
+  console.log('payload?.courseId:>>', payload?.courseId);
   return (
     <ActionSheet id={sheetId} containerStyle={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
@@ -89,12 +90,14 @@ const BookSessionSheet = ({payload, sheetId}: Props) => {
                     updateUpcomingSession({
                       reservedCourseName: payload?.courseName,
                       reservedSessionTime: selectedId,
+                      reservedCourseID: payload?.courseId,
                     }),
                   )
                 : dispatch(
                     setUpcomingSession({
                       reservedSessionTime: selectedId,
                       reservedCourseName: payload?.courseName,
+                      reservedCourseID: payload?.courseId,
                     }),
                   );
               closeSheet();

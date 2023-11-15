@@ -13,7 +13,8 @@ const primary = {
 };
 const secondary = {
   default: colors.orange[100], //#FF7260,
-  dark: colors.orange[200], //#FF634D
+  dark: colors.orange[200], //#FF634D,
+  dark1: colors.orange[300], //#CE5959
 };
 
 const black = {
@@ -127,4 +128,5 @@ export const light = {
 
   //studentDashboard
   studentDashboardCardBg: white.default,
+  studentDashboardCardSession: secondary.dark1,
 };

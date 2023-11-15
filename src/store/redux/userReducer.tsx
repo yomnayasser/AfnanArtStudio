@@ -1,7 +1,7 @@
 import {createSlice} from '@reduxjs/toolkit';
 import type {PayloadAction} from '@reduxjs/toolkit';
 
-import {enrolledCourses, reservedCourse} from '@common/types';
+import {enrolledCoursesTypes, reservedCourse} from '@common/types';
 
 export interface UserState {
   user: {
@@ -9,7 +9,7 @@ export interface UserState {
     firstName: string;
     lastName: string;
     age: number;
-    enrolledCourses: enrolledCourses[];
+    enrolledCourses: enrolledCoursesTypes[];
     reservedCourse: reservedCourse[];
   };
 }
@@ -30,6 +30,7 @@ const initialState: UserState = {
         endDate: '',
         enrollmentPeriod: 0,
         status: -1,
+        id: 0,
       },
     ],
     reservedCourse: [
@@ -38,6 +39,7 @@ const initialState: UserState = {
         upcomingSessionDay: '',
         upcomingSessionStartTime: '',
         upcomingSessionEndTime: '',
+        courseId: 0,
       },
     ],
   },
@@ -52,12 +54,12 @@ export const userSlice = createSlice({
     },
     setUpcomingSession: (state, action) => {
       const date = action?.payload?.reservedSessionTime.split(' ');
-      console.log('date:>>', date);
       state?.user?.reservedCourse?.push({
         courseName: action?.payload?.reservedCourseName,
         upcomingSessionDay: date[0],
         upcomingSessionStartTime: date[1],
         upcomingSessionEndTime: date[4],
+        courseId: action?.payload?.reservedCourseID,
       });
     },
     updateUpcomingSession: (state, action) => {
@@ -66,13 +68,13 @@ export const userSlice = createSlice({
       const updateReservedIndex = reservedCourseData.findIndex(course => {
         return course.courseName === action?.payload?.reservedCourseName;
       });
-      console.log('updateReservedIndex:>>', updateReservedIndex);
       if (reservedCourseData[updateReservedIndex]) {
         reservedCourseData[updateReservedIndex] = {
           courseName: action?.payload?.reservedCourseName,
           upcomingSessionDay: date[0],
           upcomingSessionStartTime: date[1],
           upcomingSessionEndTime: date[4],
+          courseId: action?.payload?.reservedCourseID,
         };
       }
     },

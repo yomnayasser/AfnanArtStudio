@@ -10,7 +10,8 @@ export default StyleSheet.create({
   filterContainer: {
     ...layouts.row,
     ...layouts.justifyBetween,
-    ...layouts.my.xxl,
+    ...layouts.mt.xxl,
+    ...layouts.mb.md,
   },
   sortContainer: {
     borderColor: '@primaryText',

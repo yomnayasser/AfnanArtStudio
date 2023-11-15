@@ -3,11 +3,11 @@ import React from 'react';
 
 import {Text, View} from '@wrappers/index';
 import styles from './DashboardCard.styles';
-import {enrolledCourses} from '@common/types';
+import {enrolledCoursesTypes} from '@common/types';
 import {Header, ProgressCircle} from '@components/index';
 
 type Props = {
-  enrolledCourses: enrolledCourses[];
+  enrolledCourses: enrolledCoursesTypes[];
 };
 
 // eslint-disable-next-line @typescript-eslint/no-shadow

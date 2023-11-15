@@ -91,7 +91,7 @@ export type feedbackTypes = {
   date: string;
 };
 
-export interface enrolledCourses {
+export interface enrolledCoursesTypes {
   name: string;
   sessionsLeft: number;
   pendingFees: number;
@@ -100,6 +100,7 @@ export interface enrolledCourses {
   endDate: string;
   enrollmentPeriod: number;
   status: number;
+  id: number;
 }
 
 export interface reservedCourse {
@@ -107,6 +108,7 @@ export interface reservedCourse {
   upcomingSessionDay: string;
   upcomingSessionStartTime: string;
   upcomingSessionEndTime: string;
+  courseId: number;
 }
 
 export interface imageCarousel {

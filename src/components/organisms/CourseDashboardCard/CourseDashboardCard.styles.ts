@@ -4,23 +4,15 @@ import {spacing, layouts} from '@constants/styles';
 import {px} from '@common/utils';
 
 export default StyleSheet.create({
-  container: {
-    marginTop: spacing.xl + px(40),
-    ...layouts.mx.xl,
-  },
   progressCircle: {
     ...layouts.allCentered,
-    ...layouts.my.xxl,
+    ...layouts.mt.xl,
   },
   cardContainer: {
     backgroundColor: '#e6e6e4',
     borderRadius: 20,
-    // borderColor: '#141414',
-    // borderWidth: 2,
     ...layouts.px.xl,
-    ...layouts.py.xl,
-  },
-  header: {
+    ...layouts.py.xxl,
     ...layouts.my.xl,
   },
   dataContainer: {

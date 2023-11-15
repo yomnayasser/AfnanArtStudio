@@ -4,13 +4,21 @@ import {layouts} from '@constants/styles';
 
 export default StyleSheet.create({
   upcomingSession: {
-    ...layouts.mb.xl,
-    width: 300,
+    width: 250,
   },
   row: {
     ...layouts.row,
+    ...layouts.mt.xxl,
   },
   editIcon: {
     ...layouts.ms.md,
+    ...layouts.mb.xl,
+  },
+  sessionBooking: {
+    ...layouts.row,
+    alignSelf: 'flex-end',
+  },
+  edit: {
+    ...layouts.mx.xl,
   },
 });

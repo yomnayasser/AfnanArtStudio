@@ -11,9 +11,10 @@ type Props = {
   size: number;
   title: string;
   style?: ViewStyle;
+  color?: ViewStyle;
 };
 
-const ProgressCircle = ({value, total, size, title, style}: Props) => {
+const ProgressCircle = ({value, total, size, title, style, color}: Props) => {
   const theme = getCurrentTheme().def;
   const {progressCircle} = theme;
   return (
@@ -22,12 +23,12 @@ const ProgressCircle = ({value, total, size, title, style}: Props) => {
         value={value}
         radius={size}
         duration={2000}
-        progressValueColor={progressCircle}
+        progressValueColor={color ? color : progressCircle}
         maxValue={total}
         title={title}
-        titleColor={progressCircle}
+        titleColor={color ? color : progressCircle}
         titleStyle={fonts.poppinsBold}
-        activeStrokeColor={progressCircle}
+        activeStrokeColor={color ? color : progressCircle}
       />
     </View>
   );

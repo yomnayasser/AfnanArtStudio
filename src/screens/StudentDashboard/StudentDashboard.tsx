@@ -1,5 +1,5 @@
 import {t} from 'i18next';
-import React, {useState} from 'react';
+import React from 'react';
 import {ScrollView} from 'react-native';
 import {useSelector} from 'react-redux';
 import AnimatedLottieView from 'lottie-react-native';
@@ -10,7 +10,6 @@ import {
   Filter,
   Header,
   HorizontalCoursesList,
-  SessionReminder,
 } from '@components/index';
 import {RootState} from '@store/redux';
 import {ANIMATION} from '@constants/assets';
@@ -24,9 +23,7 @@ const StudentDashboard = () => {
 
   const user = useSelector((state: RootState) => state.userReducer.user);
   const enrolledCourses = user?.enrolledCourses;
-  const [expandSession, setExpand] = useState(
-    enrolledCourses?.length > 1 ? false : true,
-  );
+
   return (
     <>
       <ScreenHeader headerText={t('your_enrolled_courses')} />
@@ -34,17 +31,10 @@ const StudentDashboard = () => {
         style={styles.innerContainer}
         showsVerticalScrollIndicator={false}>
         <Filter />
-        <SessionReminder />
 
         {enrolledCourses.length > 0 ? (
           enrolledCourses?.map(course => {
-            return (
-              <CourseDashboardCard
-                expandSession={expandSession}
-                setExpand={setExpand}
-                course={course}
-              />
-            );
+            return <CourseDashboardCard course={course} />;
           })
         ) : (
           <View style={styles.animationContainer}>

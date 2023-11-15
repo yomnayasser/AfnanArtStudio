@@ -14,7 +14,30 @@
         "startDate": "8/10/2023",
         "endDate": "8/12/2023",
         "enrollmentPeriod": 14,
-        "status": 1
+        "status": 1,
+        "id": 3
+      },
+      {
+        "name": "Acrylic",
+        "sessionsLeft": 0,
+        "pendingFees": 0,
+        "cashBack": 0,
+        "startDate": "8/8/2023",
+        "endDate": "8/10/2023",
+        "enrollmentPeriod": 14,
+        "status": 0,
+        "id": 2
+      },
+      {
+        "name": "Acrylic",
+        "sessionsLeft": 2,
+        "pendingFees": 0,
+        "cashBack": 0,
+        "startDate": "8/6/2023",
+        "endDate": "8/8/2023",
+        "enrollmentPeriod": 14,
+        "status": -1,
+        "id": 1
       }
     ],
     "reservedCourse": []

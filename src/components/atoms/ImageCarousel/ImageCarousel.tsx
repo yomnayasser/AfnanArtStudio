@@ -12,7 +12,7 @@ type Props = {
   style?: ViewStyle;
 };
 
-const ImageCarousel = ({data, style}: Props) => {
+const ImageCarouselRN = ({data, style}: Props) => {
   const [carouselData, setCarouselData] = useState<imageCarousel[]>([]);
   useEffect(() => {
     const temp: imageCarousel[] = [];
@@ -29,12 +29,15 @@ const ImageCarousel = ({data, style}: Props) => {
   return (
     <View style={[styles.container, style ? style : {}]}>
       <Carousel
+        initialScrollIndex={0}
         loop={true}
         autoplay={true}
-        autoplayInterval={2000}
+        autoplayInterval={3000}
         lockScrollWhileSnapping
         layout={'stack'}
         data={carouselData}
+        loopClonesPerSide={data.length}
+        firstItem={-data.length}
         renderItem={({item}) => (
           <View>
             <Image source={item.image} />
@@ -51,5 +54,5 @@ const ImageCarousel = ({data, style}: Props) => {
     </View>
   );
 };
-
+const ImageCarousel = React.memo(ImageCarouselRN);
 export default ImageCarousel;
