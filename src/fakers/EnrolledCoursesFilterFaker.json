@@ -1,0 +1,62 @@
+[
+  {
+    "courseStatus": [
+      {
+        "name": "Active",
+        "status": 1,
+        "selected": false,
+        "index": 0
+      },
+      {
+        "name": "Completed",
+        "status": 0,
+        "selected": false,
+        "index": 1
+      },
+      {
+        "name": "Expired",
+        "status": -1,
+        "selected": false,
+        "index": 2
+      }
+    ],
+    "coursesName": [
+      {
+        "name": "Acrylic",
+        "status": 0,
+        "selected": false,
+        "index": 0
+      },
+      {
+        "name": "Oil",
+        "status": 1,
+        "selected": false,
+        "index": 1
+      },
+      {
+        "name": "Sketching",
+        "status": 2,
+        "selected": false,
+        "index": 2
+      },
+      {
+        "name": "Kids",
+        "status": 3,
+        "selected": false,
+        "index": 3
+      },
+      {
+        "name": "Resin",
+        "status": 5,
+        "selected": false,
+        "index": 4
+      },
+      {
+        "name": "Mosaic",
+        "status": 5,
+        "selected": false,
+        "index": 5
+      }
+    ]
+  }
+]

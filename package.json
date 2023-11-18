@@ -27,6 +27,7 @@
     "react-i18next": "^13.2.2",
     "react-native": "0.72.4",
     "react-native-actions-sheet": "^0.9.0-alpha.24",
+    "react-native-check-box": "^2.1.7",
     "react-native-circular-progress-indicator": "^4.4.2",
     "react-native-gesture-handler": "^2.13.1",
     "react-native-image-slider-box": "^2.0.7",

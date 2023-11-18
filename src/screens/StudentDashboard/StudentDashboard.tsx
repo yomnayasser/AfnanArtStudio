@@ -1,9 +1,11 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import {t} from 'i18next';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {ScrollView} from 'react-native';
 import {useSelector} from 'react-redux';
 import AnimatedLottieView from 'lottie-react-native';
 import {useNavigation} from '@react-navigation/native';
+import {SheetManager} from 'react-native-actions-sheet';
 
 import {
   CourseDashboardCard,
@@ -17,12 +19,23 @@ import styles from './StudentDashboard.styles';
 import {ScreenHeader} from '@components/index';
 import {Pressable, Text, View} from '@wrappers/index';
 import {AvailableCoursesScreen} from '@navigation/navigationTypes';
+import {getEnrolledCoursesData} from './StudentDashboardUtils';
 
 const StudentDashboard = () => {
   const navigation = useNavigation<AvailableCoursesScreen>();
 
   const user = useSelector((state: RootState) => state.userReducer.user);
-  const enrolledCourses = user?.enrolledCourses;
+  const [filterStatus, setFilterStatus] = useState(['']);
+  const [filterName, setFilterName] = useState(['']);
+  const [enrolledCourses, setEnrolledCourses] = useState(user?.enrolledCourses);
+  useEffect(() => {
+    getEnrolledCoursesData(
+      filterName,
+      user?.enrolledCourses,
+      filterStatus,
+      setEnrolledCourses,
+    );
+  }, [filterName, filterStatus]);
 
   return (
     <>
@@ -30,8 +43,17 @@ const StudentDashboard = () => {
       <ScrollView
         style={styles.innerContainer}
         showsVerticalScrollIndicator={false}>
-        <Filter />
-
+        <Filter
+          onPressFilter={() => {
+            SheetManager.show('EnrolledCoursesFilterSheet', {
+              payload: {
+                setFilterStatus: setFilterStatus,
+                setFilterName: setFilterName,
+              },
+            });
+          }}
+          onPressSort={() => {}}
+        />
         {enrolledCourses.length > 0 ? (
           enrolledCourses?.map(course => {
             return <CourseDashboardCard course={course} />;
@@ -44,7 +66,15 @@ const StudentDashboard = () => {
               source={ANIMATION.login4}
               style={styles.animation}
             />
-            <Text center>{t('no_enrolled_courses')}</Text>
+            <Text center>
+              {filterName.length === 0
+                ? t('no_enrolled_courses')
+                : filterName.length === 1
+                ? `${t('you_are_not_enrolled_in')} ${filterName[0]} ${t(
+                    'course',
+                  )}`
+                : t('you_are_not_enrolled_in_these_courses')}
+            </Text>
             <Pressable
               onPress={() => {
                 navigation.navigate('AvailableCourses');

@@ -31,13 +31,13 @@ const CourseDashboardCard = ({course}: Props) => {
     reserved => reserved.courseId === course.id,
   );
   const finishedSessions = course?.enrollmentPeriod - course?.sessionsLeft;
-
   return (
     <View style={[styles.cardContainer, getOpacity(activeCourse)]}>
       <View style={styles.dataContainer}>
         <Text xMediumSize medium>
           {course?.name} {t('course')}
         </Text>
+
         {!expandSession && !isBookedBefore && activeCourse ? (
           <Pressable
             onPress={() => {

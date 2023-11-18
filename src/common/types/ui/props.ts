@@ -121,3 +121,10 @@ export interface HorizontalImageSliderTypes {
   image: string;
   name: string;
 }
+
+export interface checkboxesTypes {
+  name: string;
+  status: number;
+  selected: boolean;
+  index: number;
+}

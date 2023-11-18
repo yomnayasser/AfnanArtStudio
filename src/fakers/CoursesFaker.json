@@ -1,5 +1,6 @@
 [
   {
+    "index": 0,
     "name": "Acrylic",
     "image": "Acrylic",
     "experience": "No Experience Needed",
@@ -53,6 +54,7 @@
     ]
   },
   {
+    "index": 1,
     "name": "Oil",
     "image": "Oil",
     "experience": "No Experience Needed",
@@ -88,6 +90,7 @@
     ]
   },
   {
+    "index": 2,
     "name": "Sketching",
     "image": "Sketching",
     "experience": "No Experience Needed",
@@ -125,6 +128,7 @@
     ]
   },
   {
+    "index": 3,
     "name": "Kids",
     "image": "KidsArt",
     "experience": "No Experience Needed",
@@ -162,6 +166,7 @@
     ]
   },
   {
+    "index": 4,
     "name": "Resin",
     "image": "Resin",
     "experience": "No Experience Needed",
@@ -198,6 +203,7 @@
     ]
   },
   {
+    "index": 5,
     "name": "Mosaic",
     "image": "Mosaic",
     "experience": "No Experience Needed",

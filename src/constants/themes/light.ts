@@ -129,4 +129,7 @@ export const light = {
   //studentDashboard
   studentDashboardCardBg: white.default,
   studentDashboardCardSession: secondary.dark1,
+
+  //checkbox
+  checkboxChecked: primary.default,
 };

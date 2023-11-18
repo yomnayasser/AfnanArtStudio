@@ -39,7 +39,6 @@ const BookSessionSheet = ({payload, sheetId}: Props) => {
   const closeSheet = async () => {
     await SheetManager.hide('BookSessionSheet');
   };
-  console.log('payload?.courseId:>>', payload?.courseId);
   return (
     <ActionSheet id={sheetId} containerStyle={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
