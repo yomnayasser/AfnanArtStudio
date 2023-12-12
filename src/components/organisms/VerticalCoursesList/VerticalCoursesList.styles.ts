@@ -6,12 +6,8 @@ import {px} from '@common/utils';
 export default StyleSheet.create({
   container: {
     ...layouts.my.xl,
-    borderWidth: 1,
     ...layouts.py.xl,
     ...layouts.px.xl,
-    // borderRadius: 15,
-    backgroundColor: '@cardBg',
-    borderColor: '@cardBg',
     ...layouts.shadowProp,
   },
   row: {

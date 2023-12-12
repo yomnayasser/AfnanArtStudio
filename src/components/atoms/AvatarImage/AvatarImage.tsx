@@ -1,3 +1,4 @@
+import {t} from 'i18next';
 import React from 'react';
 import {useSelector} from 'react-redux';
 import {GestureResponderEvent} from 'react-native';
@@ -37,14 +38,28 @@ const AvatarImage = ({
         style={styles.image}
       />
       {editMode && (
-        <Pressable
-          onPress={() => {
-            setSelectedImage && openImagePicker(setSelectedImage);
-          }}>
-          <Text center color={'@primaryText'} style={styles.editText}>
-            Edit Picture
-          </Text>
-        </Pressable>
+        <>
+          {selectedImage && (
+            <Pressable
+              onPress={() => {
+                setSelectedImage && setSelectedImage('');
+              }}>
+              <Icon
+                name="close"
+                size={18}
+                style={[styles.icon, styles.deleteIcon]}
+              />
+            </Pressable>
+          )}
+          <Pressable
+            onPress={() => {
+              setSelectedImage && openImagePicker(setSelectedImage);
+            }}>
+            <Text center color={'@primaryText'} style={styles.editText}>
+              {t('edit_picture')}
+            </Text>
+          </Pressable>
+        </>
       )}
 
       {!editMode && (

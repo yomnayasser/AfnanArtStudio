@@ -9,6 +9,7 @@ export default StyleSheet.create({
     height: 130,
     borderRadius: 130 / 2,
   },
+  deleteIcon: {backgroundColor: '@errorBg'},
   icon: {
     position: 'absolute',
     bottom: 0,

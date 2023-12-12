@@ -121,6 +121,7 @@ export const light = {
 
   //Bg
   primaryBg: primary.bg,
+  errorBg: error.bg,
 
   //radioButton
   radioBorderColor: primary.default,
