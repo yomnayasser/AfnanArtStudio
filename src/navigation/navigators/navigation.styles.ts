@@ -1,6 +1,5 @@
 import {StyleSheet} from 'react-native';
 import layouts from '@constants/styles/layouts';
-import {px} from '@common/utils';
 
 export default StyleSheet.create({
   container: {
@@ -18,6 +17,6 @@ export default StyleSheet.create({
     ...layouts.my.sm,
   },
   bottomTabText: {
-    ...layouts.pb.sm,
+    ...layouts.py.sm,
   },
 });

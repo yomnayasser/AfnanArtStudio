@@ -4,7 +4,10 @@
     "password": "123!456yY",
     "firstName": "Yomna",
     "lastName": "Yasser",
+    "phoneNumber": 012288070668,
+    "emailAddress": "yomnayasser31@gmail.com",
     "age": 24,
+    "profileImage": "",
     "enrolledCourses": [
       {
         "name": "Acrylic",

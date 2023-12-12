@@ -17,7 +17,7 @@ type iconsType = {
 };
 const icons: iconsType = {
   Home: 'home-14',
-  Dashboard: 'brush-44',
+  MyCourses: 'color-palette',
   Profile: 'user4',
 };
 const MyTabBar = ({state, descriptors, navigation}: BottomTabBarProps) => {
@@ -63,7 +63,7 @@ const MyTabBar = ({state, descriptors, navigation}: BottomTabBarProps) => {
             onLongPress={onLongPress}
             style={{}}>
             <Icon
-              name={icons[label as string]}
+              name={icons[label.split(' ').join('') as string]}
               style={styles.icon}
               size={20}
               color={
@@ -92,7 +92,7 @@ const BottomTabNavigator = () => {
       screenOptions={{headerShown: false}}
       tabBar={props => <MyTabBar {...props} />}>
       <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="Dashboard" component={StudentDashboard} />
+      <Tab.Screen name="My Courses" component={StudentDashboard} />
       <Tab.Screen name="Profile" component={StudentProfile} />
     </Tab.Navigator>
   );

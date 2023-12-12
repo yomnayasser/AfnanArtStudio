@@ -1,27 +1,19 @@
-import React, {useState} from 'react';
+import React from 'react';
+import {TextInput} from 'react-native-gesture-handler';
 import {Control, Controller} from 'react-hook-form';
+import {Text, View} from '@wrappers/index';
 import {getCurrentTheme} from 'react-native-theming';
 
-import styles from './Input.styles';
-import {Text, TextInput, TouchableOpacity, View} from '@wrappers/index';
-import {Icon} from '@components/atoms';
-import {LoginFormValues} from '@common/types';
-
 type Props = {
-  control: Control<LoginFormValues, any> | undefined;
+  control: any;
   placeholder: string | number;
   onChange?: Function;
-  name: 'password' | 'userName';
-  type?: string;
+  name: string;
   isSubmitted?: boolean;
 };
-
-const Input = ({control, placeholder, name, type}: Props) => {
+const EditInputText = ({control, placeholder, name}: Props) => {
   const theme = getCurrentTheme().def;
   const {darkText} = theme;
-  const password = type === 'password' ? true : false;
-  const [secureText, setSecureText] = useState(true);
-
   return (
     <View>
       <Controller
@@ -37,21 +29,8 @@ const Input = ({control, placeholder, name, type}: Props) => {
                 placeholderTextColor={darkText}
                 editable={true}
                 style={styles.input}
-                secureTextEntry={password ? (secureText ? true : false) : false}
                 maxLength={20}
               />
-              {password && (
-                <TouchableOpacity
-                  onPress={() => {
-                    setSecureText(!secureText);
-                  }}>
-                  <Icon
-                    name={!secureText ? 'eye' : 'eye-slash4'}
-                    size={20}
-                    style={styles.icon}
-                  />
-                </TouchableOpacity>
-              )}
             </View>
             {error && (
               <Text smallSize color={'@textInputError'} style={styles.error}>
@@ -66,4 +45,4 @@ const Input = ({control, placeholder, name, type}: Props) => {
   );
 };
 
-export default Input;
+export default EditInputText;

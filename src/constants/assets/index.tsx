@@ -57,6 +57,8 @@ export const IMAGES: images = {
   carousel13: require('./Images/carousel13.jpeg'),
   carousel15: require('./Images/carousel15.jpeg'),
   carousel16: require('./Images/carousel16.jpeg'),
+  profile: require('./Images/Profile.png'),
+  avatar: require('./Images/avatar.jpeg'),
 };
 
 export const ANIMATION = {

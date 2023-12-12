@@ -1,6 +1,7 @@
 export {store} from './redux';
 export {
   setUserData,
+  updateProfileInfo,
   setUpcomingSession,
   updateUpcomingSession,
   deleteUpcomingSession,

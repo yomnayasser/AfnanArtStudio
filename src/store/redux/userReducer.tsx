@@ -9,8 +9,11 @@ export interface UserState {
     firstName: string;
     lastName: string;
     age: number;
+    phoneNumber: number;
+    emailAddress: string;
     enrolledCourses: enrolledCoursesTypes[];
     reservedCourse: reservedCourse[];
+    profileImage: string;
   };
 }
 
@@ -20,6 +23,9 @@ const initialState: UserState = {
     firstName: '',
     lastName: '',
     age: 0,
+    profileImage: '',
+    phoneNumber: 0,
+    emailAddress: '',
     enrolledCourses: [
       {
         name: '',
@@ -85,11 +91,20 @@ export const userSlice = createSlice({
       });
       reservedCourseData.splice(deleteReservedIndex, 1);
     },
+    updateProfileInfo: (state, action) => {
+      state.user.firstName = action?.payload?.personalInfoData?.Name;
+      state.user.lastName = action?.payload?.personalInfoData?.LastName;
+      state.user.username = action?.payload?.personalInfoData?.Username;
+      state.user.phoneNumber = action?.payload?.personalInfoData?.PhoneNumber;
+      state.user.emailAddress = action?.payload?.personalInfoData?.EmailAddress;
+      state.user.profileImage = action?.payload?.profileImage;
+    },
   },
 });
 
 export const {
   setUserData,
+  updateProfileInfo,
   setUpcomingSession,
   updateUpcomingSession,
   deleteUpcomingSession,

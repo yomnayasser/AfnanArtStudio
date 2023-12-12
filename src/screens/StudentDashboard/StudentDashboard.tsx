@@ -25,8 +25,8 @@ const StudentDashboard = () => {
   const navigation = useNavigation<AvailableCoursesScreen>();
 
   const user = useSelector((state: RootState) => state.userReducer.user);
-  const [filterStatus, setFilterStatus] = useState(['']);
-  const [filterName, setFilterName] = useState(['']);
+  const [filterStatus, setFilterStatus] = useState([]);
+  const [filterName, setFilterName] = useState([]);
   const [enrolledCourses, setEnrolledCourses] = useState(user?.enrolledCourses);
   useEffect(() => {
     getEnrolledCoursesData(
@@ -52,7 +52,9 @@ const StudentDashboard = () => {
               },
             });
           }}
-          onPressSort={() => {}}
+          onPressSort={() => {
+            // SheetManager.show('EnrolledCoursesSortSheet');
+          }}
         />
         {enrolledCourses.length > 0 ? (
           enrolledCourses?.map(course => {

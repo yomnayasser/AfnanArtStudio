@@ -79,7 +79,7 @@ const Button = ({
       ) : (
         <View style={styles.titleContainer}>
           <Text
-            semiBold
+            medium
             style={
               outlined
                 ? {

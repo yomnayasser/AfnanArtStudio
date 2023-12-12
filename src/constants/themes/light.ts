@@ -132,4 +132,13 @@ export const light = {
 
   //checkbox
   checkboxChecked: primary.default,
+
+  //HorizontalSeparator
+  horizontalSeparator: primary.bg,
+
+  //switch
+  switchOn: primary.default,
+  switchOnBg: primary.bg,
+  switchOff: gray.light,
+  switchOffBg: gray.bg,
 };

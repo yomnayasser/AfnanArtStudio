@@ -11,6 +11,7 @@ type Props = {
   style?: ViewStyle;
   badge?: number;
   iconPosition?: 'Left' | 'Right';
+  color?: string;
 };
 
 const Header = ({
@@ -20,6 +21,7 @@ const Header = ({
   style,
   badge,
   iconPosition = 'Right',
+  color,
 }: Props) => {
   return (
     <View style={style ? style : null}>
@@ -55,7 +57,9 @@ const Header = ({
           )}
         </View>
       ) : (
-        <Text medium>{headerText}</Text>
+        <Text medium color={color ? color : '@darkText'}>
+          {headerText}
+        </Text>
       )}
     </View>
   );
